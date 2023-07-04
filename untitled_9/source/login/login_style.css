@@ -1,0 +1,215 @@
+
+/*  textul din textbar-uri
+    inainte de a scrie ceva*/
+
+::placeholder
+{
+    color:var(--c,#c36b84);
+}
+
+/*   elemente selectionate   */
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus 
+{
+    outline: none;
+}
+
+html 
+{
+    display:table; 
+    width:100%;
+}
+
+body 
+{
+    display:table-cell; 
+    text-align:center; 
+    vertical-align:middle;
+}
+
+/*  blocuri
+    bara de titlu    */
+
+#upperdiv
+{
+    text-align:center; 
+    margin-top:-100px; 
+    width:100%; 
+    height:120px; 
+    margin-bottom:10px;
+}
+
+/*  blocul central  */
+
+#maindiv
+{
+    display:flex; 
+    align-items:center; 
+    justify-content:center;
+    margin-top:200px;
+}
+
+/*  titlu   */
+
+#titolo
+{
+    color:#ed6b5b;
+    font-size:100px; 
+    font-family:Leelawadee;
+}
+
+/*  patratul din mijloc */
+
+#contenitore
+{
+    text-align:center; 
+    width:435px;
+    background-color:#ed6b5b; 
+    padding-top:5px; 
+    border-radius:10px;
+}
+
+/*  label   */
+
+label
+{
+    font-family:Cascadia Code;
+    color:rgb(236, 10, 29);
+    visibility:hidden;
+}
+
+/*  text-bar-uri si texte   */
+
+.textint
+{
+    font-size:40px; 
+    font-family:Cascadia Code; 
+    margin-bottom: 12px; 
+    width:400px;
+    background-color: #f9ac66; 
+    border:none; 
+    color:#3a3e59; 
+    border-radius:5.5px;
+    transition:all 0.3s;
+}
+
+.textint:hover
+{
+    color:#c36b84;
+}
+
+.textint:focus
+{
+    color:#c36b84;
+}
+
+.divint
+{
+    font-size:36px; 
+    font-family:Cascadia Code; 
+    margin-bottom:12px; 
+    color:#3a3e59;
+    transition:all 0.4s;
+}
+
+/*  buton de tema   */
+
+.btnanim2
+{
+    width:45px; 
+    height:45px; 
+    border:none; 
+    border-radius:50%; 
+    margin-left:25px;
+    margin-bottom:25px;
+    position:absolute;
+    bottom:0;
+    background-color:black;
+    color:white;
+    display:none;
+    font-size:25px;
+    transition:0.25s;
+}
+
+.btnanim2:hover
+{
+    width:60px;
+    height:60px;
+    margin-left:17.5px;
+    margin-bottom:17.5px;
+}
+
+.btnanim2:active
+{
+    background-color:white;
+    color:black;
+}
+
+.btnanim1
+{
+    width:45px; 
+    height:45px; 
+    border:none; 
+    border-radius:50%; 
+    margin-left:25px;
+    margin-bottom:25px;
+    position:absolute;
+    bottom:0;
+    background-color:white;
+    color:black;
+    display:block;
+    font-size:25px;
+    transition:0.25s;
+}
+
+.btnanim1:hover
+{
+    width:60px;
+    height:60px;
+    margin-left:17.5px;
+    margin-bottom:17.5px;
+}
+
+.btnanim1:active
+{
+    background-color:black;
+    color:white;
+}
+
+/*  fundal  */
+
+.purple-mode
+{
+    background-color: #3a3e59;
+}
+
+.white-mode
+{
+    background-color: #F1F1F2;
+}
+
+/*  buton de submit  */
+
+#conferma
+{
+    font-size:40px; 
+    font-family:Cascadia Code; 
+    margin-bottom: 10px;
+    width:150px; 
+    height:50px;
+    background-color: #f9ac66; 
+    border:#3a3e59; 
+    color:#3a3e59; 
+    border-radius:5.5px;
+    transition:all 0.3s;
+}
+
+#conferma:hover
+{
+    color:#c36b84;
+}
+
+/* ---------- */
