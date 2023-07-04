@@ -1,0 +1,11 @@
+@media screen and (min-width:800px)
+{
+    .sidebar
+    {
+        width:140px;
+        font-size:25px;
+        font-family:Rajdhani;
+        background-image: url("sidebar_background.jpg");
+        color:white;
+    }
+}
