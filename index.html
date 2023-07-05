@@ -8,8 +8,17 @@
         <script type="text/javascript" src="./script.js"></script>
     </head>
     <body>
-        <aside class="sidebar">
-            <p>Hi mum</p>
+        <aside id="sidebar" class="sidebar">
+            <p id="sidebar-navigation-title" class="sidebar-section-title">Hi mum</p><br>
+            <div id="sidebar-navigation-buttons" class="sidebar-navigation-buttons">
+                <button id="sidebar-navigation-to-contact" class="sidebar-section-button" 
+                        onclick="ScrollToContact()">Contact</button>
+                <button id="sidebar-navigation-to-projects" class="sidebar-section-button" 
+                        onclick="ScrollToProjects()">Projects</button>
+                <button id="sidebar-navigation-to-top" style="font-weight:bolder;" 
+                        class="sidebar-section-button" onclick="ScrollToTop()">Welcome</button>
+            </div>
+            <img style="position:absolute;bottom:2%;left:8px;" width="120px" height="60" src="./logo_1.png">
         </aside>
     </body>
 </html>

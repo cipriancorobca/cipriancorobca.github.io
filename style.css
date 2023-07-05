@@ -18,9 +18,57 @@ html,body
 {
     width:140px;
     height:100%;
-    font-size:25px;
     font-family:Rajdhani;
-    background-image: url("sidebar_background.jpg");
+    background-image: url("./sidebar_background.jpg");
     color:white;
     float:left;
+    position:fixed;
 }
+
+.rotated-text
+{
+    writing-mode: vertical-lr;
+}
+
+.sidebar-section-title
+{
+    color:#A1DBF1;
+    font-size:25px;
+    left:10px;
+    position:absolute;
+    font-weight: bold;
+}
+
+.sidebar-section-button
+{
+    color:whitesmoke;
+    background:none;
+    border:none;
+    font-family:Rajdhani;
+    font-size:22.5px;
+    width:100px;
+    margin-bottom:3px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.sidebar-section-button:hover
+{
+    background-color: rgba(225, 239, 250, 0.6);
+    color:white;
+    font-weight: 200;
+}
+
+.sidebar-navigation-buttons
+{
+    height:100px;
+    width:100px;
+    position:absolute;
+    top:35%;
+    left:5px;
+    margin-left:12px;
+    rotate:90deg;
+}
+
+
+/*color:linear-gradient(to top left,rgb(245, 244, 223),#f1a1ed);*/
