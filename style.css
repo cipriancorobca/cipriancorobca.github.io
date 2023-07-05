@@ -8,13 +8,19 @@
     .sidebar{display: none;}
 }
 
+html,body
+{
+    height:100%;
+    margin:0;
+}
+
 .sidebar
 {
     width:140px;
+    height:100%;
     font-size:25px;
     font-family:Rajdhani;
     background-image: url("sidebar_background.jpg");
     color:white;
     float:left;
-    display: none;
 }
