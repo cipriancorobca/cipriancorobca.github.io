@@ -1,18 +1,13 @@
-@media screen and (min-width:800px)
-{
-    .sidebar{display: block;}
-}
-
-@media screen and (max-width:799px)
-{
-    .sidebar{display: none;}
-}
+/*bodyu parameters*/
 
 html,body
 {
     height:100%;
     margin:0;
 }
+
+/*-----------------------*/
+/*sidebar main parameters*/
 
 .sidebar
 {
@@ -25,19 +20,44 @@ html,body
     position:fixed;
 }
 
-.rotated-text
+@media screen and (min-width:800px)
 {
-    writing-mode: vertical-lr;
+    .sidebar{display: block;}
 }
+
+@media screen and (max-width:799px)
+{
+    .sidebar{display: none;}
+}
+
+/*-----------------------*/
+/*sidebar text on top left*/
 
 .sidebar-section-title
 {
     color:#A1DBF1;
     font-size:25px;
-    left:10px;
+    left:25px;
     position:absolute;
     font-weight: bold;
 }
+
+/*-----------------------*/
+/*sidebar 3 buttons container*/
+
+.sidebar-navigation-buttons
+{
+    height:100px;
+    width:100px;
+    position:absolute;
+    top:33.3%;
+    left:10px;
+    margin-left:12px;
+    rotate:90deg;
+}
+
+/*-----------------------*/
+/*sidebar generic button*/
 
 .sidebar-section-button
 {
@@ -47,6 +67,7 @@ html,body
     font-family:Rajdhani;
     font-size:22.5px;
     width:100px;
+    height:33px;
     margin-bottom:3px;
     display: inline-block;
     transition: 0.3s;
@@ -59,16 +80,40 @@ html,body
     font-weight: 200;
 }
 
-.sidebar-navigation-buttons
+/*-----------------------*/
+/*sidebar button corresponding to the section scrolled to*/
+
+.sidebar-section-button-selected
 {
-    height:100px;
+    color:whitesmoke;
+    background:none;
+    border:1px solid transparent;
+    font-family:Rajdhani;
+    font-size:22.5px;
     width:100px;
-    position:absolute;
-    top:35%;
-    left:5px;
-    margin-left:12px;
-    rotate:90deg;
+    height:33px;
+    margin-bottom:3px;
+    display: inline-block;
+    transition: 0.3s;
 }
 
+.sidebar-section-button-selected:hover
+{
+    border:1px solid rgba(225, 239, 250, 0.6);
+    color:white;
+    margin-bottom:2.5px;
+}
 
-/*color:linear-gradient(to top left,rgb(245, 244, 223),#f1a1ed);*/
+/*-----------------------*/
+/*sidebar sideways text*/
+
+.sidebar-text
+{
+    font-size: 14px;
+    font-family:Rajdhani;
+    writing-mode: vertical-lr;
+    position: absolute;
+}
+
+/*-----------------------*/
+/**/

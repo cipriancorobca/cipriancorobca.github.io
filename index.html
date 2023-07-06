@@ -9,16 +9,23 @@
     </head>
     <body>
         <aside id="sidebar" class="sidebar">
-            <p id="sidebar-navigation-title" class="sidebar-section-title">Hi mum</p><br>
+            <p id="sidebar-navigation-title" class="sidebar-section-title">Welcome</p><br>
             <div id="sidebar-navigation-buttons" class="sidebar-navigation-buttons">
                 <button id="sidebar-navigation-to-contact" class="sidebar-section-button" 
                         onclick="ScrollToContact()">Contact</button>
                 <button id="sidebar-navigation-to-projects" class="sidebar-section-button" 
                         onclick="ScrollToProjects()">Projects</button>
                 <button id="sidebar-navigation-to-top" style="font-weight:bolder;" 
-                        class="sidebar-section-button" onclick="ScrollToTop()">Welcome</button>
-            </div>
-            <img style="position:absolute;bottom:2%;left:8px;" width="120px" height="60" src="./logo_1.png">
+                        class="sidebar-section-button-selected" onclick="ScrollToTop()">About</button>
+            </div><br>
+            <p id="sidebar-text-name" style="left:69px;top:50%;"
+               class="sidebar-text">Name:Ciprian Corobca</p>
+            <p id="sidebar-text-location" style="left:69px;top:69%;"
+               class="sidebar-text">Location:Eastern Europe</p>
+            <p id="sidebar-text-occupation" style="left:20px;top:57%;text-align: center;"
+               class="sidebar-text">Musician,Video creator,Artist<br>Occupation:Front end developer,</p>
+            <img id="sidebar-bottom-logo" style="position:absolute;bottom:2%;left:8px;" 
+                 width="120px" height="60" src="./logo_1.png">
         </aside>
     </body>
 </html>
