@@ -1,9 +1,569 @@
-/*bodyu parameters*/
+/*body parameters*/
 
 html,body
 {
     height:100%;
     margin:0;
+    position: relative;
+    scroll-behavior: smooth;
+    overflow-x:hidden;
+}
+
+/*-----------------------*/
+/*texts*/
+
+.tooltip-text 
+{
+    visibility:hidden;
+    position:absolute;
+    z-index:12;
+    width:180px;
+    font-size:20px;
+    line-height:25px;
+    color:white;
+    background-color: rgba(31, 42, 51, 0.75);
+    padding:5px;
+}
+
+.tooltip-hover
+{
+    text-decoration:underline dotted;
+    text-decoration-color: rgba(173, 141, 153, 0.8);
+}
+
+.tooltip-hover:hover .tooltip-text
+{
+    visibility: visible;
+}
+
+#about-button
+{
+    text-decoration:underline;
+    text-decoration-thickness:5px;
+    border:none;
+    background: none;
+    font-family: Ysabeau Infant;
+    font-size:1em;
+    font-weight:600;
+    transition: 0.3s;
+}
+
+#about-button:hover
+{
+    color:orange;
+}
+
+#hello-text
+{
+    font-family: Ysabeau Infant;
+    font-size:10em;
+    line-height: 130px;
+    margin:0;
+    margin-left:15%;
+    margin-top:220px;
+    margin-bottom:80px;
+}
+
+#intro-text
+{
+    font-family: Ysabeau Infant;
+    font-size:5em;
+    line-height:75px;
+    margin:0;
+    margin-left:15%;
+    margin-top:10px;
+}
+
+#project-text
+{
+    font-family: Ysabeau Infant;
+    font-size:5em;
+    line-height:75px;
+    margin:0;
+    margin-left:15%;
+    margin-top:60px;
+}
+
+#second-about-section-title
+{
+    font-family: Ysabeau Infant;
+    font-size:5em;
+    line-height:75px;
+    margin:0;
+    margin-left:15%;
+    margin-top:75px;
+    margin-bottom:50px;
+}
+
+#description
+{
+    font-family:Quicksand;
+    font-size:2.5em;
+    line-height:30px;
+    margin:0;
+    margin-left:15%;
+    width:60%;
+}
+
+#skills-title
+{
+    font-family: Ysabeau Infant;
+    font-size:4em;
+    line-height:60px;
+    margin:0;
+    margin-left:15%;
+    margin-top:20px;
+    margin-bottom:30px;
+}
+
+#skill-list
+{
+    font-family:Quicksand;
+    font-size:2.5em;
+    line-height:30px;
+    margin:0;
+    margin-left:15%;
+    width:50%;
+}
+
+#welcome-button
+{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    border:2.5px solid whitesmoke;
+    background: none;
+    color:white;
+    position: absolute;
+    top:0;
+    right:0;
+    margin:20px;
+    transition: 0.3s;
+    background-image: url("./download.png");
+    background-size: 45px 45px;
+    rotate:90deg;
+}
+
+#welcome-button:hover
+{
+    background-color: rgba(235, 209, 214, 0.5);
+}
+
+@media screen and (min-width:1000px)
+{
+    #hello-text
+    {
+        margin-top:220px;
+        margin-bottom:80px;
+        font-size:10em;
+        line-height: 130px;
+    }
+
+    #intro-text
+    {
+        font-size:5em;
+        margin-top:10px;
+        line-height:75px;
+    }
+
+    #second-about-section-title
+    {
+        font-size:5em;
+        line-height:75px;
+        margin-top:75px;
+        margin-bottom:50px;
+    }
+
+    #description
+    {
+        font-size:2.5em;
+        line-height:30px;
+    }
+
+    #skills-title
+    {
+        font-size:4em;
+        line-height:60px;
+        margin-top:20px;
+        margin-bottom:30px;
+    }
+
+    #skill-list
+    {
+        font-size:2.5em;
+        line-height:30px;
+    }
+}
+
+@media screen and (max-width:999px)
+{
+    #hello-text
+    {
+        margin-top:150px;
+        margin-bottom:60px;
+        font-size:6em;
+        line-height: 110px;
+    }
+
+    #intro-text
+    {
+        font-size:3em;
+        margin-top:6px;
+        line-height:60px;
+    }
+
+    #second-about-section-title
+    {
+        font-size:4em;
+        line-height:70px;
+        margin-top:60px;
+        margin-bottom:30px;
+    }
+
+    #description
+    {
+        font-size:2em;
+        line-height:25px;
+    }
+
+    #skills-title
+    {
+        font-size:3em;
+        line-height:50px;
+        margin-top:15px;
+        margin-bottom:20px;
+    }
+
+    #skill-list
+    {
+        font-size:2em;
+        line-height:25px;
+    }
+}
+
+@media screen and (max-width:899px)
+{
+    #skills-title
+    {
+        display:none;
+    }
+
+    #skill-list
+    {
+        display:none;
+    }
+}
+
+@media screen and (max-width:799px)
+{
+    #hello-text
+    {
+        margin-bottom:0px;
+        font-size:4em;
+    }
+
+    #intro-text
+    {
+        font-size:2em;
+        margin-top:3px;
+        line-height:40px;
+    }
+
+    #second-about-section-title
+    {
+        font-size:2em;
+        line-height:50px;
+        margin-top:50px;
+        margin-bottom:25px;
+    }
+
+    #description
+    {
+        font-size:1.5em;
+        line-height:20px;
+    }
+}
+
+@media screen and (min-height:900px)
+{
+    #hello-text
+    {
+        margin-top:220px;
+        margin-bottom:100px;
+        line-height: 130px;
+    }
+
+    #intro-text
+    {
+        line-height:75px;
+    }
+
+    #second-about-section-title
+    {
+        font-size:5em;
+        line-height:75px;
+        margin-top:75px;
+        margin-bottom:50px;
+    }
+
+    #description
+    {
+        font-size:2em;
+        line-height:33.3px;
+    }
+
+    #skills-title
+    {
+        font-size:4em;
+        line-height:60px;
+        margin-top:20px;
+        margin-bottom:30px;
+    }
+
+    #skill-list
+    {
+        font-size:2.5em;
+        line-height:30px;
+    }
+}
+
+@media screen and (max-height:899px)
+{
+    #hello-text
+    {
+        margin-top:120px;
+        margin-bottom:30px;
+        line-height: 110px;
+    }
+
+    #intro-text
+    {
+        line-height:70px;
+    }
+
+    #second-about-section-title
+    {
+        font-size:4em;
+        line-height:70px;
+        margin-top:50px;
+        margin-bottom:20px;
+    }
+
+    #description
+    {
+        font-size:1.5em;
+        line-height:22px;
+    }
+
+    #skills-title
+    {
+        font-size:3em;
+        line-height:50px;
+        margin-top:15px;
+        margin-bottom:20px;
+        display:block;
+    }
+
+    #skill-list
+    {
+        font-size:2em;
+        line-height:25px;
+        display:block;
+    }
+}
+
+@media screen and (max-height:834px)
+{
+    #skills-title
+    {
+        display:none;
+    }
+
+    #skill-list
+    {
+        display:none;
+    }
+}
+
+@media screen and (max-height:599px)
+{
+    #hello-text
+    {
+        margin-top:75px;
+        margin-bottom:20px;
+    }
+
+    #intro-text
+    {
+        line-height:60px;
+    }
+
+    #second-about-section-title
+    {
+        font-size:3em;
+        line-height:60px;
+        margin-top:35px;
+        margin-bottom:10px;
+    }
+
+    #description
+    {
+        font-size:1em;
+        line-height:15px;
+    }
+
+    #skills-title
+    {
+        font-size:2em;
+        line-height:40px;
+        margin-top:10px;
+        margin-bottom:10px;
+        display:block;
+    }
+
+    #skill-list
+    {
+        font-size:1em;
+        line-height:15px;
+        display:block;
+    }
+}
+
+/*-----------------------*/
+/*link buttons*/
+
+#button-links
+{
+    width:400px;
+    height:95px;
+    text-align: center;
+    margin-left:15%;
+    margin-top:75px;
+    padding:0;
+    border:1px solid black;
+}
+
+.round-button
+{
+    width:75px;
+    height:75px;
+    margin:10px;
+    border-radius:50%;
+    border:3px solid whitesmoke;
+    background:none;
+    font-size:35px;
+    font-family:Quicksand;
+    color:whitesmoke;
+    font-weight:bold;
+    transition: 0.3s;
+    vertical-align: middle;
+    padding-top:8px;
+    padding-right:6.5px;
+}
+
+#git.round-button
+{
+    background-image: url("./git.png");
+    background-size:67.5px 67.5px;
+    background-repeat: no-repeat;
+}
+
+#linkedin.round-button
+{
+    background-image: url("./linkedin.png");
+    background-size:67.5px 67.5px;
+    background-repeat: no-repeat;
+}
+
+#insta.round-button
+{
+    background-image: url("./insta.png");
+    background-size:67.5px 67.5px;
+    background-repeat: no-repeat;
+}
+
+#cv.round-button:hover
+{
+    transition: 0.3s;
+    color:transparent;
+    background-image:url("./download.png");
+    background-repeat: no-repeat;
+}
+
+.round-button:hover
+{
+    background-color:rgba(235, 209, 214, 0.5);
+}
+
+@media screen and (max-width:499px)
+{
+    .round-button
+    {
+        width:45px;
+        height:45px;
+        border:2px solid whitesmoke;
+    }
+
+    #button-links
+    {
+        width:300px;
+        height:65px;
+    }
+
+    #git.round-button
+    {
+        background-size:40px 40px;
+    }
+
+    #linkedin.round-button
+    {
+        background-size:40px 40px;
+    }
+
+    #insta.round-button
+    {
+        background-size:40px 40px;
+    }
+
+    #cv.round-button
+    {
+        font-size:20px;
+    }
+
+    #cv.round-button:hover
+    {
+        background-size: 40px 40px;
+    }
+}
+
+/*-----------------------*/
+/*scrollbar*/
+
+::-webkit-scrollbar
+{
+    width:12px;
+}
+
+::-webkit-scrollbar-track
+{
+    background-color:transparent;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background:#aac3d1;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background:#7c919c;
+}
+
+::-webkit-scrollbar-thumb:active
+{
+    background:#3b4a52;
 }
 
 /*-----------------------*/
@@ -18,14 +578,15 @@ html,body
     color:white;
     float:left;
     position:fixed;
+    display: block;
 }
 
-@media screen and (min-width:800px)
+@media screen and (min-width:900px)
 {
     .sidebar{display: block;}
 }
 
-@media screen and (max-width:799px)
+@media screen and (max-width:899px)
 {
     .sidebar{display: none;}
 }
@@ -115,5 +676,37 @@ html,body
     position: absolute;
 }
 
+@media screen and (max-height:720px)
+{
+    .sidebar-text
+    {
+        display: none;
+    }
+}
+
 /*-----------------------*/
-/**/
+/*content containers*/
+
+#about-content-container
+{
+    height:100%;
+    width:100%;
+    padding:1px;
+    background-color:#FCB9B5;
+}
+
+#projects-content-container
+{
+    height:100%;
+    width:100%;
+    padding:1px;
+    background-color:#B5EECB;
+}
+
+#contact-content-container
+{
+    height:100%;
+    width:100%;
+    padding:1px;
+    background-color:#1F3541;
+}
