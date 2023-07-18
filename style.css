@@ -82,6 +82,7 @@ html,body
     margin:0;
     margin-left:15%;
     margin-top:60px;
+    margin-bottom:5%;
 }
 
 #second-about-section-title
@@ -440,7 +441,7 @@ html,body
     margin-left:15%;
     margin-top:75px;
     padding:0;
-    border:1px solid black;
+    border:none;
 }
 
 .round-button
@@ -709,4 +710,200 @@ html,body
     width:100%;
     padding:1px;
     background-color:#1F3541;
+}
+
+/*-----------------------*/
+/*project buttons*/
+
+.project-div
+{
+    width:35%;
+    height:21%;
+    border:none;
+    margin-left:15%;
+    margin-bottom:30px;
+    border-radius:18px;
+    display:block;
+    background-color:#1e2d42;
+    box-shadow: -4px 4px 12px rgba(74, 83, 81, 0.69);
+    transition: 0.5s;
+}
+
+.project-div:hover
+{
+    margin-left:16%;
+}
+
+.project-name
+{
+    margin:4%;
+    margin-left:8%;
+    font-size:40px;
+    font-family:Ysabeau Infant;
+    color:whitesmoke;
+}
+
+.proj-tools
+{
+    margin:4%;
+    margin-left:8%;
+    margin-top:0;
+    font-size:25px;
+    font-family:Quicksand;
+    color:#7c919c;
+}
+
+/*-----------------------*/
+/*project-info*/
+
+.project-info-div
+{
+    width:45%;
+    height:100%;
+    float:right;
+}
+
+.project-title
+{
+    margin-top:25%;
+    margin-left:69px;
+    font-family: Ysabeau Infant;
+    font-size:4em;
+    line-height:60px;
+}
+
+.proj-desc
+{
+    font-family:Quicksand;
+    font-size:22px;
+    line-height:30px;
+    margin-top:69px;
+    margin-left:69px;
+    width:80%;
+}
+
+.proj-links
+{
+    width:150px;
+    height:50px;
+    font-size:30px;
+    font-family:Rajdhani;
+    font-weight:bold;
+    background: none;
+    margin-left:140px;
+    margin-top:80px;
+}
+
+#source-btn-1.proj-links,#source-btn-2.proj-links
+{
+    margin-left:50px;
+}
+
+#useless
+{
+    font-family:Quicksand;
+    font-size:33.33px;
+    margin-top:-28px;
+    margin-left:250px;
+}
+
+.close-proj-info
+{
+    float:right;
+    display:inline;
+    margin:30px;
+    background:none;
+    border:2px solid whitesmoke;
+    color:whitesmoke;
+    font-family:Ysabeau Infant;
+    font-size:30px;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.close-proj-info:hover
+{
+    background-color:rgba(185, 212, 200, 0.5);
+}
+
+/*-----------------------*/
+/*contact info*/
+
+#contact-info
+{
+    width:1000px;
+    margin-left:22.5%;
+    margin-top:20%;
+    transition:0.8s;
+}
+
+.contact-text
+{
+    font-family:Ysabeau Infant;
+    color:whitesmoke;
+    line-height:100px;
+    margin-bottom:4px;
+}
+
+#contact-text-1
+{
+    font-size:100px;
+    margin-bottom:0;
+}
+
+#contact-text-2
+{
+    font-size:80px;
+    margin-top:0;
+}
+
+#contact-buttons
+{
+    width:150px;
+    height:45px;
+    text-align: center;
+    margin-left:22.5%;
+    padding:0;
+    border:none;
+}
+
+#git-2.round-button
+{
+    background-image: url("./git.png");
+    background-size:32.5px 32.5px;
+    background-repeat: no-repeat;
+    width:40px;
+    height:40px;
+    margin:2px;
+}
+
+#linkedin-2.round-button
+{
+    background-image: url("./linkedin.png");
+    background-size:32.5px 32.5px;
+    background-repeat: no-repeat;
+    width:40px;
+    height:40px;
+    margin:2px;
+}
+
+#insta-2.round-button
+{
+    background-image: url("./insta.png");
+    background-size:32.5px 32.5px;
+    background-repeat: no-repeat;
+    width:40px;
+    height:40px;
+    margin:2px;
+}
+
+#mail-text
+{
+    font-family:Quicksand;
+    font-size:25px;
+    margin-top:4px;
+    margin-bottom:5px;
+    font-weight: bolder;
 }

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-16" lang="ro">
+        <title>Untitled 9</title>
+        <link id="favico" rel="icon" href="..\..\icons\icon_1.png">
+        <script>
+            let faviconElem = document.getElementById('favico');
+            faviconElem.setAttribute('href','../../icons/icon_' + Math.floor(Math.random()*(4-1+1)+1) + '.png');
+        </script>
+        <script type="text/javascript" src="homepage_script.js"></script>
+        <link rel="stylesheet" href="homepage_style.css">
+    </head>
+
+    <body lang="en" class="purple-mode">
+        <div id="upperdiv">
+            <p id="titolo">
+                <a href="home.html" id="titlelink">Untitled 9</a>
+            </p>
+        </div>
+        
+        
+        <div id="maindiv" class="maindiv">
+            <div id="content1" class="content">
+                <img src="../../resources/does_img_fit.gif" width="256" height="192" class="imagery">
+                
+                <p class="info" id="info1">Does your image fit your desktop properly?</p><br>
+
+                <button id="findout1" class="findout" onclick="Showimg()">Find out!</button>
+            </div>
+            
+            <div id="content2" class="content">
+                <img src="../../resources/wrong_calc.gif" width="256" height="192" class="imagery">
+                
+                <p class="info" id="info2">We have a calculator that gives wrong answers</p><br>
+
+                <button id="findout2" class="findout" onclick="Showcalc()">Try it!</button>
+            </div>
+        </div>
+        
+        <div id="maindiv" class="maindiv">
+            <div id="content3" class="content">
+                <img src="../../resources/tall.gif" width="256" height="192" class="imagery">
+                
+                <p class="info" id="info3">How tall will your child be?</p><br>
+
+                <button id="findout3" class="findout" onclick="Showtall()">Tell me!</button>
+            </div>
+
+            <div id="content4" class="content">
+                <img src="../../resources/font.gif" width="256" height="192" class="imagery">
+                
+                <p class="info" id="info4">What fonts does your document use?</p><br>
+
+                <button id="findout4" class="findout" onclick="Showcs()">I'm interested!</button>
+            </div>
+        </div>
+
+        <div id="contentdiv">
+            <div id="comingsoon" style="display:none;">
+                <p class="info" id="infocs">This feature is not yet available.</p>
+            </div>
+
+            <div id="tall" style="display:none;">
+                <div id="tallproc" style="display:block;">
+                    
+                    <p class="contentinfo" id="cnf1">How tall will your child be?</p>
+
+                    <img src="../../resources/tall.gif" width="400" height="300" class="imagery" style="margin-top:0;">
+
+                    <div>
+                        <select class="textint" onchange="Gay()" id="selecta1">
+                            <option value="none">??????</option>
+                            <option value="hetero">Heterosexual</option>
+                            <option value="gay">Homosexual</option>
+                        </select><br>
+
+                        <input type="number" min="0" max="300" placeholder="Her height" class="textint" id="her"><br>
+                        <input type="number" min="0" max="300" placeholder="His height" class="textint" id="him"><br>
+
+                        <select class="textint" id="selecta15">
+                            <option value="none">??????</option>
+                            <option value="f">Girl</option>
+                            <option value="m">Boy</option>
+                        </select><br>
+
+                        <button class="conferma" id="c1" onclick="Tallreslt()">Find out!</button>
+                    </div>
+                </div>
+
+                <div id="tallresult" style="display:none;">
+                    <p class="contentinfo" id="rslt1">Your child's adult height will be:</p><br>
+
+                    <label class="reslbl" id="res1" style="margin-top:300px;margin-bottom:200px;">300</label><br>
+
+                    <a class="info" id="credits" href="https://www.mayoclinic.org/healthy-lifestyle/childrens-health/expert-answers/child-growth/faq-20057990#:~:text=Here's%20a%20popular%20example%3A,Divide%20by%202.">Credits to the formula</a>
+                    
+                    <br><button class="conferma" id="retry1" onclick="Showtall()">Retry!</button>
+                </div>
+            </div>
+
+            <div id="imager" style="display:none;">
+                <div id="imgproc" style="display:block;">
+                    
+                    <p class="contentinfo" id="cnf2">Does your image fit your desktop properly?</p>
+
+                    <img src="../../resources/does_img_fit.gif" width="400" height="300" class="imagery" style="margin-top:0;">
+
+                    <div>
+                        <input type="file" accept="image/jpg" id="fileint">
+
+                        <button class="conferma" id="c2" onclick="Imageres()">Check!</button>
+                    </div>
+                </div>
+
+                <div id="imgresult" style="display:none;">
+                    <p class="contentinfo" id="rslt2">Yes!I think...</p><br>
+
+                    <label class="reslbl" id="res2" style="margin-top:300px;margin-bottom:200px;">1000x1000</label><br>
+                    <label class="reslbl" id="res21" style="margin-top:300px;margin-bottom:200px;">1:1</label><br>
+
+                    <button class="conferma" id="retry2" onclick="Showimg()">Retry!</button>
+                </div>
+            </div>
+
+            <div id="calc" style="display:none;">
+                <div id="calcproc" style="display:block;">
+                    
+                    <p class="contentinfo" id="cnf4">We have a calculator that gives wrong answers</p>
+                    <p class="smallinfo" id="cnf4">May give correct answers too</p>
+
+                    <img src="../../resources/wrong_calc.gif" width="400" height="300" class="imagery" style="margin-top:20;">
+
+                    <div>
+                        <textarea class="formula" id="formula" readonly value=""></textarea><br>
+                        <button class="nums" id="numbtn7" onclick="PressCalcNumButton('7')">7</button>
+                        <button class="nums" id="numbtn8" onclick="PressCalcNumButton('8')">8</button>
+                        <button class="nums" id="numbtn9" onclick="PressCalcNumButton('9')">9</button>
+                        <button class="nums" id="numbtnd" onclick="PressCalcOpButton('÷')">÷</button><br>
+                        <button class="nums" id="numbtn4" onclick="PressCalcNumButton('4')">4</button>
+                        <button class="nums" id="numbtn5" onclick="PressCalcNumButton('5')">5</button>
+                        <button class="nums" id="numbtn6" onclick="PressCalcNumButton('6')">6</button>
+                        <button class="nums" id="numbtnx" onclick="PressCalcOpButton('×')">×</button><br>
+                        <button class="nums" id="numbtn1" onclick="PressCalcNumButton('1')">1</button>
+                        <button class="nums" id="numbtn2" onclick="PressCalcNumButton('2')">2</button>
+                        <button class="nums" id="numbtn3" onclick="PressCalcNumButton('3')">3</button>
+                        <button class="nums" id="numbtn-" onclick="PressCalcOpButton('-')">-</button><br>
+                        <button class="equals" id="c4" onclick="Calcreslt()">=</button>
+                        <button class="nums" id="numbtn0" onclick="PressCalcNumButton('0')">0</button>
+                        <button class="nums" id="numbtnc" onclick="PressCalcDotButton()">.</button>
+                        <button class="nums" id="numbtnp" onclick="PressCalcOpButton('+')">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="Themeswitch1()" class="btnanim1" id="white">🖌</button>
+        <button onclick="Themeswitch2()" class="btnanim2" id="black">🖌</button>
+
+        <br>
+        <div class="btnanim3" id="lang">
+            <button id="en"></button><br>
+            <button id="ro" onclick="Romanian()"></button><br>
+            <button id="it" onclick="Italian()"></button>
+        </div>
+    </body>
+</html>

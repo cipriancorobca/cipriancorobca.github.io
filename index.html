@@ -66,10 +66,65 @@
             </div>
         </div>
         <div id="projects-content-container">
+            <div id="project-info-1" class="project-info-div" style="display:none;">
+                <button class="close-proj-info" onclick="ShowProjectInfo(0)">✖</button>
+                <h2 class="project-title">Giornalino</h2>
+                <h3 class="proj-desc">
+                    My first ever fully functional website with basic database implementation.<br>
+                    Register as article writer,write articles from scratch,edit and delete your 
+                    articles,register as article validator,view upcoming articles and validate 
+                    the ones you think are worthy to be read,join without login to read articles.
+                    Other features include:ordering articles in the feed by title,date and author 
+                    and search articles by title.
+                </h3>
+                <a href="http://localhost/giornalino/" target="_blank">
+                    <button id="visit-btn-1" class="proj-links">Visit</button>
+                </a>
+                <a href="https://github.com/cipriancorobca/giornalino" target="_blank">
+                    <button id="source-btn-1" class="proj-links">Source</button>
+                </a>
+            </div>
+            <div id="project-info-2" class="project-info-div" style="display:none;">
+                <button class="close-proj-info" onclick="ShowProjectInfo(0)">✖</button>
+                <h2 class="project-title">Untitled 9</h2>
+                <h3 class="proj-desc">
+                    Pure HTTP,CSS and JS project created entirely from scratch with lots of
+                    inspiration from 'Useless Web'.<br>Just don't ask any questions,it doesn't
+                    have any meaning.It's quite...
+                </h3><br>
+                <h3 id="useless">useless.</h3>
+                <a href="./untitled_9/source/login/login.html" target="_blank">
+                    <button id="visit-btn-2" class="proj-links">Visit</button>
+                </a>
+                <a href="https://github.com/cipriancorobca/untitled_9" target="_blank">
+                    <button id="source-btn-2" class="proj-links">Source</button>
+                </a>
+            </div>
+            
             <h2 id="project-text">Projects</h2>
+            <div id="project-1" class="project-div" onclick="ShowProjectInfo(1)">
+                <br><h3 class="project-name">Giornalino</h3>
+                <h3 class="proj-tools">HTML,CSS,PHP,MySQL</h3>
+            </div>
+            <div id="project-2" class="project-div" onclick="ShowProjectInfo(2)">
+                <br><h3 class="project-name">Untitled 9</h3>
+                <h3 class="proj-tools">HTML,CSS,JS</h3>
+            </div>
+            <div id="project-3" class="project-div" onclick="ShowProjectInfo(3)">
+                <br><br><h3 class="project-name">Other</h3>
+            </div>
         </div>
         <div id="contact-content-container">
-
+            <div id="contact-info">
+                <h2 id="contact-text-1" class="contact-text">Yeah...</h2><br>
+                <h2 id="contact-text-2" class="contact-text">Keeping it simple</h2>
+                <h3 id="mail-text">cipriancorobcacc@pm.me</h3>
+            </div>
+            <div id="contact-buttons">
+                <a href="https://github.com/cipriancorobca" target="_blank"><button id="git-2" class="round-button"></button></a>
+                <a href="https://www.linkedin.com/in/ciprian-corobca-716648282/" target="_blank"><button id="linkedin-2" class="round-button"></button></a>
+                <a href="https://www.instagram.com/saudi.pearl/" target="_blank"><button id="insta-2" class="round-button"></button></a>
+            </div>
         </div>
     </body>
 </html>
