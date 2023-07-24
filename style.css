@@ -7,6 +7,8 @@ html,body
     position: relative;
     scroll-behavior: smooth;
     overflow-x:hidden;
+    background-image: url("./background.jpg");
+    background-repeat: no-repeat;
 }
 
 /*-----------------------*/
@@ -43,6 +45,7 @@ html,body
     border:none;
     background: none;
     font-family: Ysabeau Infant;
+    color:whitesmoke;
     font-size:1em;
     font-weight:600;
     transition: 0.3s;
@@ -56,6 +59,7 @@ html,body
 #hello-text
 {
     font-family: Ysabeau Infant;
+    color:whitesmoke;
     font-size:10em;
     line-height: 130px;
     margin:0;
@@ -67,6 +71,7 @@ html,body
 #intro-text
 {
     font-family: Ysabeau Infant;
+    color:whitesmoke;
     font-size:5em;
     line-height:75px;
     margin:0;
@@ -77,6 +82,7 @@ html,body
 #project-text
 {
     font-family: Ysabeau Infant;
+    color:whitesmoke;
     font-size:5em;
     line-height:75px;
     margin:0;
@@ -88,6 +94,7 @@ html,body
 #second-about-section-title
 {
     font-family: Ysabeau Infant;
+    color:whitesmoke;
     font-size:5em;
     line-height:75px;
     margin:0;
@@ -99,6 +106,7 @@ html,body
 #description
 {
     font-family:Quicksand;
+    color:whitesmoke;
     font-size:2.5em;
     line-height:30px;
     margin:0;
@@ -109,6 +117,7 @@ html,body
 #skills-title
 {
     font-family: Ysabeau Infant;
+    color:whitesmoke;
     font-size:4em;
     line-height:60px;
     margin:0;
@@ -120,6 +129,7 @@ html,body
 #skill-list
 {
     font-family:Quicksand;
+    color:whitesmoke;
     font-size:2.5em;
     line-height:30px;
     margin:0;
@@ -643,30 +653,6 @@ html,body
 }
 
 /*-----------------------*/
-/*sidebar button corresponding to the section scrolled to*/
-
-.sidebar-section-button-selected
-{
-    color:whitesmoke;
-    background:none;
-    border:1px solid transparent;
-    font-family:Rajdhani;
-    font-size:22.5px;
-    width:100px;
-    height:33px;
-    margin-bottom:3px;
-    display: inline-block;
-    transition: 0.3s;
-}
-
-.sidebar-section-button-selected:hover
-{
-    border:1px solid rgba(225, 239, 250, 0.6);
-    color:white;
-    margin-bottom:2.5px;
-}
-
-/*-----------------------*/
 /*sidebar sideways text*/
 
 .sidebar-text
@@ -693,7 +679,6 @@ html,body
     height:100%;
     width:100%;
     padding:1px;
-    background-color:#FCB9B5;
 }
 
 #projects-content-container
@@ -701,7 +686,6 @@ html,body
     height:100%;
     width:100%;
     padding:1px;
-    background-color:#B5EECB;
 }
 
 #contact-content-container
@@ -709,7 +693,22 @@ html,body
     height:100%;
     width:100%;
     padding:1px;
-    background-color:#1F3541;
+}
+
+@media screen and (max-width:929px)
+{
+    #projects-content-container
+    {
+        padding-left:27.5%;
+    }
+}
+
+@media screen and (max-width:599px)
+{
+    #projects-content-container
+    {
+        padding-left:0;
+    }
 }
 
 /*-----------------------*/
@@ -719,13 +718,14 @@ html,body
 {
     width:35%;
     height:21%;
-    border:none;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     margin-left:15%;
     margin-bottom:30px;
     border-radius:18px;
     display:block;
-    background-color:#1e2d42;
-    box-shadow: -4px 4px 12px rgba(74, 83, 81, 0.69);
+    background: rgba( 255, 255, 255, 0.05 );
+    backdrop-filter: blur( 2.5px );
+    box-shadow: -2px 2px 12px rgba(74, 83, 81, 0.69);
     transition: 0.5s;
 }
 
@@ -743,6 +743,16 @@ html,body
     color:whitesmoke;
 }
 
+.source
+{
+    margin-top:-5px;
+    margin-left:8%;
+    font-size:30px;
+    font-family:Ysabeau Infant;
+    color:whitesmoke;
+    display: none;
+}
+
 .proj-tools
 {
     margin:4%;
@@ -753,8 +763,105 @@ html,body
     color:#7c919c;
 }
 
+@media screen and (max-width:999px)
+{
+    .project-div
+    {
+        width:45%;
+    }
+
+    .project-title
+    {
+        margin-left:5px;
+        font-size:3em;
+        line-height:48px;
+    }
+
+    .proj-desc
+    {
+        font-size:16px;
+        line-height:24px;
+        margin-top:35px;
+        margin-left:5px;
+    }
+}
+
+@media screen and (max-width:899px)
+{
+    .project-div
+    {
+        margin-left:5%;
+    }
+
+    #project-text
+    {
+        margin-left:5%;
+    }
+
+    .project-info-div
+    {
+        width:55%;
+    }
+
+    .project-div:hover
+    {
+        margin-left:8%;
+    }
+}
+
+@media screen and (max-width:849px)
+{
+    .project-name
+    {
+        margin:2%;
+        margin-top:-2%;
+        margin-left:5%;
+        font-size:30px;
+    }
+
+    .source
+    {
+        margin-left:8%;
+        font-size:20px;
+        display: block;
+    }
+
+    .proj-tools
+    {
+        margin:2%;
+        margin-left:5%;
+        font-size:15px;
+    }
+}
+
+@media screen and (max-width:599px)
+{
+    .project-div
+    {
+        width:85%;
+        height:20%;
+        border:none;
+    }
+}
+
 /*-----------------------*/
 /*project-info*/
+
+@media screen and (max-width:929px)
+{
+    #project-info-1,#project-info-2,#project-info-3,.project-info-div
+    {
+        display:none;
+    }
+}
+
+@media screen and (min-width:930px)
+{
+    #project-info-1,#project-info-2,#project-info-3,.project-info-div
+    {
+        display:none;
+    }
+}
 
 .project-info-div
 {
@@ -768,6 +875,7 @@ html,body
     margin-top:25%;
     margin-left:69px;
     font-family: Ysabeau Infant;
+    color:whitesmoke;
     font-size:4em;
     line-height:60px;
 }
@@ -775,6 +883,7 @@ html,body
 .proj-desc
 {
     font-family:Quicksand;
+    color:whitesmoke;
     font-size:22px;
     line-height:30px;
     margin-top:69px;
@@ -788,9 +897,11 @@ html,body
     height:50px;
     font-size:30px;
     font-family:Rajdhani;
+    color:whitesmoke;
+    border:2px solid whitesmoke;
     font-weight:bold;
     background: none;
-    margin-left:140px;
+    margin-left:16%;
     margin-top:80px;
 }
 
@@ -802,6 +913,7 @@ html,body
 #useless
 {
     font-family:Quicksand;
+    color:whitesmoke;
     font-size:33.33px;
     margin-top:-28px;
     margin-left:250px;
@@ -902,8 +1014,71 @@ html,body
 #mail-text
 {
     font-family:Quicksand;
+    color:orange;
     font-size:25px;
     margin-top:4px;
     margin-bottom:5px;
     font-weight: bolder;
+}
+
+@media screen and (max-width:799px)
+{
+    #contact-info
+    {
+        width:500px;
+        margin-left:15%;
+        margin-top:50%;
+    }
+
+    .contact-text
+    {
+        line-height:70px;
+        margin-bottom:2px;
+    }
+
+    #contact-text-1
+    {
+        font-size:60px;
+    }
+
+    #contact-text-2
+    {
+        font-size:40px;
+    }
+
+    #contact-buttons
+    {
+        margin-left:15%;
+    }
+
+    #git-2.round-button
+    {
+        background-size:20px 20px;
+        background-repeat: no-repeat;
+        width:25px;
+        height:25px;
+    }
+
+    #linkedin-2.round-button
+    {
+        background-size:20px 20px;
+        background-repeat: no-repeat;
+        width:25px;
+        height:25px;
+    }
+
+    #insta-2.round-button
+    {
+        background-size:20px 20px;
+        background-repeat: no-repeat;
+        width:25px;
+        height:25px;
+    }
+
+    #mail-text
+    {
+        font-size:17.5px;
+        margin-top:2px;
+        margin-bottom:3px;
+    }
 }

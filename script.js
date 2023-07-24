@@ -1,47 +1,42 @@
 window.onload = function() 
 {
     window.scrollTo(0,0);
+    var d,alt = true;
+
+    setInterval(() =>
+    {
+        d = new Date();
+
+        if(alt)
+        {
+            document.getElementById("sidebar-navigation-title").innerHTML = "" +
+            ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
+            alt = false;
+        }
+
+        else
+        {
+            document.getElementById("sidebar-navigation-title").innerHTML = "" +
+            ("0" + d.getHours()).slice(-2) + "   ​" + ("0" + d.getMinutes()).slice(-2);
+            alt = true;
+        }
+    },1000);
 }
 
 function ScrollToProjects()
 {
-    document.getElementById("sidebar-navigation-to-projects").setAttribute("class","sidebar-section-button-selected");
-    document.getElementById("sidebar-navigation-to-top").setAttribute("class","sidebar-section-button");
-    document.getElementById("sidebar-navigation-to-contact").setAttribute("class","sidebar-section-button");
-
-    document.getElementById("sidebar-navigation-to-top").style.fontWeight = "normal";
-    document.getElementById("sidebar-navigation-to-contact").style.fontWeight = "normal";
-    document.getElementById("sidebar-navigation-to-projects").style.fontWeight = "bolder";
-
-    document.getElementById("sidebar-navigation-title").innerHTML = "Projects";
+    ShowProjectInfo(0);
     document.getElementById("projects-content-container").scrollIntoView({behavior:'smooth'});
 }
 
 function ScrollToTop()
 {
-    document.getElementById("sidebar-navigation-to-top").setAttribute("class","sidebar-section-button-selected");
-    document.getElementById("sidebar-navigation-to-projects").setAttribute("class","sidebar-section-button");
-    document.getElementById("sidebar-navigation-to-contact").setAttribute("class","sidebar-section-button");
-
-    document.getElementById("sidebar-navigation-to-projects").style.fontWeight = "normal";
-    document.getElementById("sidebar-navigation-to-contact").style.fontWeight = "normal";
-    document.getElementById("sidebar-navigation-to-top").style.fontWeight = "bolder";
-
-    document.getElementById("sidebar-navigation-title").innerHTML = "About";
+    ToggleAbout(0);
     document.getElementById("about-content-container").scrollIntoView({behavior:'smooth'});
 }
 
 function ScrollToContact()
 {
-    document.getElementById("sidebar-navigation-to-contact").setAttribute("class","sidebar-section-button-selected");
-    document.getElementById("sidebar-navigation-to-top").setAttribute("class","sidebar-section-button");
-    document.getElementById("sidebar-navigation-to-projects").setAttribute("class","sidebar-section-button");
-
-    document.getElementById("sidebar-navigation-to-top").style.fontWeight = "normal";
-    document.getElementById("sidebar-navigation-to-projects").style.fontWeight = "normal";
-    document.getElementById("sidebar-navigation-to-contact").style.fontWeight = "bolder";
-
-    document.getElementById("sidebar-navigation-title").innerHTML = "Contact";
     document.getElementById("contact-content-container").scrollIntoView({behavior:'smooth'});
 }
 
@@ -74,45 +69,71 @@ function ToggleAbout(a)
 
 function ShowProjectInfo(a)
 {
-    var p1 = document.getElementById("project-info-1");
-    var p2 = document.getElementById("project-info-2");
-    var b1 = document.getElementById("project-1");
-    var b2 = document.getElementById("project-2");
-    var b3 = document.getElementById("project-3");
-
-    if(a == "0")
+    if(window.innerWidth > "930")
     {
-        p1.style.display = "none";
-        p2.style.display = "none";
-        b1.setAttribute("onclick","ShowProjectInfo(1)");
-        b2.setAttribute("onclick","ShowProjectInfo(2)");
-        b3.setAttribute("onclick","ShowProjectInfo(3)");
+        var p1 = document.getElementById("project-info-1");
+        var p2 = document.getElementById("project-info-2");
+        var p3 = document.getElementById("project-info-3");
+        var b1 = document.getElementById("project-1");
+        var b2 = document.getElementById("project-2");
+        var b3 = document.getElementById("project-3");
+
+        if(a == "0")
+        {
+            p1.style.display = "none";
+            p2.style.display = "none";
+            p3.style.display = "none";
+            b1.setAttribute("onclick","ShowProjectInfo(1)");
+            b2.setAttribute("onclick","ShowProjectInfo(2)");
+            b3.setAttribute("onclick","ShowProjectInfo(3)");
+        }
+
+        else if(a == "1")
+        {
+            p1.style.display = "block";
+            p2.style.display = "none";
+            p3.style.display = "none";
+            b1.setAttribute("onclick","ShowProjectInfo(0)");
+            b2.setAttribute("onclick","ShowProjectInfo(2)");
+            b3.setAttribute("onclick","ShowProjectInfo(3)");
+        }
+
+        else if(a == "2")
+        {
+            p1.style.display = "none";
+            p2.style.display = "block";
+            p3.style.display = "none";
+            b1.setAttribute("onclick","ShowProjectInfo(1)");
+            b2.setAttribute("onclick","ShowProjectInfo(0)");
+            b3.setAttribute("onclick","ShowProjectInfo(3)");
+        }
+
+        else if(a == "3")
+        {
+            p1.style.display = "none";
+            p2.style.display = "none";
+            p3.style.display = "block";
+            b1.setAttribute("onclick","ShowProjectInfo(1)");
+            b2.setAttribute("onclick","ShowProjectInfo(2)");
+            b3.setAttribute("onclick","ShowProjectInfo(0)");
+        }
     }
 
-    else if(a == "1")
+    else
     {
-        p1.style.display = "block";
-        p2.style.display = "none";
-        b1.setAttribute("onclick","ShowProjectInfo(0)");
-        b2.setAttribute("onclick","ShowProjectInfo(2)");
-        b3.setAttribute("onclick","ShowProjectInfo(3)");
-    }
+        if(a == "1")
+        {
+            window.open("https://github.com/cipriancorobca/giornalino","_blank");
+        }
 
-    else if(a == "2")
-    {
-        p1.style.display = "none";
-        p2.style.display = "block";
-        b1.setAttribute("onclick","ShowProjectInfo(1)");
-        b2.setAttribute("onclick","ShowProjectInfo(0)");
-        b3.setAttribute("onclick","ShowProjectInfo(3)");
-    }
+        else if(a == "2")
+        {
+            window.open("https://github.com/cipriancorobca/untitled_9","_blank");
+        }
 
-    else if(a == "3")
-    {
-        p1.style.display = "none";
-        p2.style.display = "none";
-        b1.setAttribute("onclick","ShowProjectInfo(1)");
-        b2.setAttribute("onclick","ShowProjectInfo(2)");
-        b3.setAttribute("onclick","ShowProjectInfo(0)");
+        else if(a == "3")
+        {
+            window.open("https://github.com/cipriancorobca/cipriancorobca.github.io","_blank");
+        }
     }
 }

@@ -6,19 +6,20 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani">
         <script type="text/javascript" src="./script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     </head>
     <body>
         <aside id="sidebar" class="sidebar">
             <p id="sidebar-navigation-title" class="sidebar-section-title">Welcome</p><br>
             <div id="sidebar-navigation-buttons" class="sidebar-navigation-buttons">
                 <button id="sidebar-navigation-to-contact" class="sidebar-section-button" 
-                        onclick="ScrollToContact()">Contact</button>
+                    onclick="ScrollToContact()">Contact</button>
                 <button id="sidebar-navigation-to-projects" class="sidebar-section-button" 
-                        onclick="ScrollToProjects()">Projects</button>
-                <button id="sidebar-navigation-to-top" style="font-weight:bolder;" 
-                        class="sidebar-section-button-selected" onclick="ScrollToTop()">About</button>
+                    onclick="ScrollToProjects()">Projects</button>
+                <button id="sidebar-navigation-to-top" class="sidebar-section-button" 
+                    onclick="ScrollToTop()">About</button>
             </div><br>
-            <p id="sidebar-text-name" style="left:69px;top:50%;"
+            <<p id="sidebar-text-name" style="left:69px;top:50%;"
                class="sidebar-text">Name:Ciprian Corobca</p>
             <p id="sidebar-text-location" style="left:69px;top:69%;"
                class="sidebar-text">Location:Eastern Europe</p>
@@ -27,7 +28,7 @@
             <img id="sidebar-bottom-logo" style="position:absolute;bottom:2%;left:8px;" 
                  width="120px" height="60" src="./logo_1.png">
         </aside>
-        <div id="about-content-container">
+        <div id="about-content-container" class="page-section">
             <div id="about-1" style="display:block;opacity:1;">
                 <h1 id="hello-text">Hello there!</h1><br>
                 <h2 id="intro-text">My name is <button id="about-button" onclick="ToggleAbout(1)">
@@ -55,27 +56,24 @@
                 </h3>
                 <h2 id="skills-title">Skills</h2>
                 <h3 id="skill-list">
-                    HTML, CSS, JavaScript, PHP, Photoshop, Premiere Pro, Sketch (on paper or with graphic tablet)
+                    HTML, CSS, JavaScript, Wordpress, PHP, Photoshop, Premiere Pro, Sketch (on paper or with graphic tablet)
                 </h3>
                 <div id="button-links">
                     <a href="https://github.com/cipriancorobca" target="_blank"><button id="git" class="round-button"></button></a>
                     <a href="https://www.linkedin.com/in/ciprian-corobca-716648282/" target="_blank"><button id="linkedin" class="round-button"></button></a>
                     <a href="https://www.instagram.com/saudi.pearl/" target="_blank"><button id="insta" class="round-button"></button></a>
-                    <a href="./sidebar_background.jpg" download="good.pdf" target="_blank"><button id="cv" class="round-button" style="padding:0;">CV</button></a>
+                    <a href="./CV_Ciprian_Corobca.zip" download="good.pdf" target="_blank"><button id="cv" class="round-button" style="padding:0;">CV</button></a>
                 </div>
             </div>
         </div>
-        <div id="projects-content-container">
+        <div id="projects-content-container" class="page-section">
             <div id="project-info-1" class="project-info-div" style="display:none;">
                 <button class="close-proj-info" onclick="ShowProjectInfo(0)">✖</button>
                 <h2 class="project-title">Giornalino</h2>
                 <h3 class="proj-desc">
                     My first ever fully functional website with basic database implementation.<br>
-                    Register as article writer,write articles from scratch,edit and delete your 
-                    articles,register as article validator,view upcoming articles and validate 
-                    the ones you think are worthy to be read,join without login to read articles.
-                    Other features include:ordering articles in the feed by title,date and author 
-                    and search articles by title.
+                    Part of a school project,this could easily be turned into a real blogging website.<br>
+                    Also the 'Visit' button doesn't work :(
                 </h3>
                 <a href="http://localhost/giornalino/" target="_blank">
                     <button id="visit-btn-1" class="proj-links">Visit</button>
@@ -88,7 +86,7 @@
                 <button class="close-proj-info" onclick="ShowProjectInfo(0)">✖</button>
                 <h2 class="project-title">Untitled 9</h2>
                 <h3 class="proj-desc">
-                    Pure HTTP,CSS and JS project created entirely from scratch with lots of
+                    Pure HTML,CSS and JS project created entirely from scratch with lots of
                     inspiration from 'Useless Web'.<br>Just don't ask any questions,it doesn't
                     have any meaning.It's quite...
                 </h3><br>
@@ -100,21 +98,35 @@
                     <button id="source-btn-2" class="proj-links">Source</button>
                 </a>
             </div>
-            
+            <div id="project-info-3" class="project-info-div" style="display:none;">
+                <button class="close-proj-info" onclick="ShowProjectInfo(0)">✖</button>
+                <h2 class="project-title">This.</h2>
+                <h3 class="proj-desc">
+                    Pure HTML,CSS and JS project created entirely for showing off purposes.<br>
+                    I mean,if I need to get a job,I gotta be convincing!<sup>duh</sup>
+                </h3><br>
+                <a href="https://github.com/cipriancorobca/cipriancorobca.github.io" target="_blank">
+                    <button id="source-btn-3" class="proj-links">Source</button>
+                </a>
+            </div>
             <h2 id="project-text">Projects</h2>
             <div id="project-1" class="project-div" onclick="ShowProjectInfo(1)">
                 <br><h3 class="project-name">Giornalino</h3>
                 <h3 class="proj-tools">HTML,CSS,PHP,MySQL</h3>
+                <h3 class="source">Source→</h3>
             </div>
             <div id="project-2" class="project-div" onclick="ShowProjectInfo(2)">
                 <br><h3 class="project-name">Untitled 9</h3>
                 <h3 class="proj-tools">HTML,CSS,JS</h3>
+                <h3 class="source">Source→</h3>
             </div>
             <div id="project-3" class="project-div" onclick="ShowProjectInfo(3)">
-                <br><br><h3 class="project-name">Other</h3>
+                <br><h3 class="project-name">Portfolio</h3>
+                <h3 class="proj-tools">HTML,CSS,JS</h3>
+                <h3 class="source">Source→</h3>
             </div>
         </div>
-        <div id="contact-content-container">
+        <div id="contact-content-container" class="page-section">
             <div id="contact-info">
                 <h2 id="contact-text-1" class="contact-text">Yeah...</h2><br>
                 <h2 id="contact-text-2" class="contact-text">Keeping it simple</h2>
