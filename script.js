@@ -1,7 +1,18 @@
-/*window.onload = function() 
+const occupations = [
+    'Frontend developer','UI/UX designer',
+    'Gamer','Cycling enjoyer','Artist',
+    'Game developer','Quick learner'
+]
+var v = true,g;
+
+window.onload = function() 
 {
     window.scrollTo(0,0);
-    var d,alt = true;
+    let a = Math.trunc(Math.random()*7);
+    g = a;
+    document.getElementById('occupation').innerHTML = occupations[a];
+    setInterval(changeContentAndVisibility, 4000);
+    /*var d,alt = true;
 
     setInterval(() =>
     {
@@ -20,8 +31,20 @@
             ("0" + d.getHours()).slice(-2) + " " + ("0" + d.getMinutes()).slice(-2);
             alt = true;
         }
-    },1000);
-}*/
+    },1000);*/
+}
+
+function changeContentAndVisibility() 
+{
+    let a = Math.trunc(Math.random()*7);
+    if(a != g)
+    {
+        document.getElementById('occupation').style.opacity = "0";
+        setTimeout(function(){document.getElementById('occupation').innerHTML = occupations[a];},600);
+        setTimeout(function(){document.getElementById('occupation').style.opacity = "1";},800);
+        g = a;
+    }
+}
 
 function ScrollToProjects()
 {
@@ -61,9 +84,9 @@ function ToggleAbout(a)
         ab2.style.opacity = "0";
         setTimeout(function(){ab2.style.display = "none"}, 600);
         setTimeout(function(){ab1.style.display = "block"}, 600);
-        ab1.style.opacity = "0";
         ab1.style.transition = "0.6s opacity";
-        ab1.style.opacity = "1";
+        ab1.style.opacity = "0";
+        setTimeout(function(){ab1.style.opacity = "1"}, 600);
     }
 }
 

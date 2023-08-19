@@ -7,7 +7,8 @@ html,body
     position: relative;
     scroll-behavior: smooth;
     overflow-x:hidden;
-    background-image: url("./background.jpg");
+    background-color: rgb(3, 3, 3);
+    /*background-image: url("./background.jpg");*/
     background-repeat: no-repeat;
 }
 
@@ -36,6 +37,12 @@ html,body
 .tooltip-hover:hover .tooltip-text
 {
     visibility: visible;
+}
+
+#occupation
+{
+    color:rgb(52, 255, 255);
+    transition:0.6s opacity;
 }
 
 #about-button
@@ -585,7 +592,7 @@ html,body
     width:140px;
     height:100%;
     font-family:Rajdhani;
-    background-image: url("./sidebar_background.jpg");
+    background-image: linear-gradient(to right,rgba(0,0,0,0),rgb(3, 3, 5)), url("./sidebar_background.jpg");
     color:white;
     float:left;
     position:fixed;
@@ -723,9 +730,9 @@ html,body
     margin-bottom:30px;
     border-radius:18px;
     display:block;
-    background: rgba( 255, 255, 255, 0.05 );
+    background: rgba(11, 11, 14, 0.432);
     backdrop-filter: blur( 2.5px );
-    box-shadow: -2px 2px 12px rgba(74, 83, 81, 0.69);
+    box-shadow: -2px 2px 8px rgba(34, 39, 38, 0.69);
     transition: 0.5s;
 }
 
