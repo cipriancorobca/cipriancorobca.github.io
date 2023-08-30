@@ -690,7 +690,7 @@ html,body
 
 #projects-content-container
 {
-    height:120%;
+    height:150%;
     width:100%;
     padding:1px;
 }
@@ -724,7 +724,7 @@ html,body
 .project-div
 {
     width:45%;
-    height:21%;
+    height:16%;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     margin-left:30%;
     margin-bottom:30px;
