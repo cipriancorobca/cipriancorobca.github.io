@@ -104,7 +104,7 @@ function ShowProjectInfo(a)
 
     else if(a == "3")
     {
-        window.open("https://pileous-hopes.000webhostapp.com","_blank");
+        window.open("https://newssharing.space","_blank");
     }
 
     else if(a == "4")
