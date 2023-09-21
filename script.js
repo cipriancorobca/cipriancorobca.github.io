@@ -94,7 +94,7 @@ function ShowProjectInfo(a)
 {
     if(a == "1")
     {
-        window.open("https://saudipearl4.wordpress.com","_blank");
+        window.open("https://tryit-vopz.onrender.com","_blank");
     }
 
     else if(a == "2")
@@ -108,6 +108,11 @@ function ShowProjectInfo(a)
     }
 
     else if(a == "4")
+    {
+        window.open("https://saudipearl4.wordpress.com","_blank");
+    }
+
+    else if(a == "5")
     {
         window.open("https://github.com/cipriancorobca/cipriancorobca.github.io","_blank");
     }
