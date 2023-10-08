@@ -599,11 +599,6 @@ html,body
     display: block;
 }
 
-@media screen and (min-width:900px)
-{
-    .sidebar{display: block;}
-}
-
 @media screen and (max-width:899px)
 {
     .sidebar{display: none;}
