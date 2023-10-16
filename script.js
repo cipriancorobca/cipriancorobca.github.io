@@ -36,14 +36,18 @@ window.onload = function()
 
 function changeContentAndVisibility() 
 {
-    let a = Math.trunc(Math.random()*7);
-    if(a != g)
+    let temp;
+    do
     {
-        document.getElementById('occupation').style.opacity = "0";
-        setTimeout(function(){document.getElementById('occupation').innerHTML = occupations[a];},600);
-        setTimeout(function(){document.getElementById('occupation').style.opacity = "1";},800);
+        temp == g;
+        var a = Math.trunc(Math.random()*7);
         g = a;
-    }
+    }while(a == temp);
+    
+    
+    document.getElementById('occupation').style.opacity = "0";
+    setTimeout(function(){document.getElementById('occupation').innerHTML = occupations[a];},600);
+    setTimeout(function(){document.getElementById('occupation').style.opacity = "1";},800);
 }
 
 function ScrollToProjects()
