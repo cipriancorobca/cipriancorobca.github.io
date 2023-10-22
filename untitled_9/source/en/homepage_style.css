@@ -345,11 +345,13 @@ body
 .btnanim3:hover > #it
 {
     visibility: visible;
+    transition-delay: 0.11s;
 }
 
 .btnanim3:hover > #ro
 {
     visibility: visible;
+    transition-delay: 0.11s;
 }
 
 .btnanim3:hover > #en
