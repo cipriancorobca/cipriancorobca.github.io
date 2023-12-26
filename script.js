@@ -98,25 +98,30 @@ function ShowProjectInfo(a)
 {
     if(a == "1")
     {
-        window.open("https://tryit-vopz.onrender.com","_blank");
+        window.open("./css_boxes/index.html","_blank");
     }
 
     else if(a == "2")
     {
-        window.open("./untitled_9/source/login/login.html","_blank");
+        window.open("https://tryit-vopz.onrender.com","_blank");
     }
 
     else if(a == "3")
     {
-        window.open("https://newssharing.space","_blank");
+        window.open("./untitled_9/source/login/login.html","_blank");
     }
 
     else if(a == "4")
     {
-        window.open("https://saudipearl4.wordpress.com","_blank");
+        window.open("https://newssharing.space","_blank");
     }
 
     else if(a == "5")
+    {
+        window.open("https://saudipearl4.wordpress.com","_blank");
+    }
+
+    else if(a == "6")
     {
         window.open("https://github.com/cipriancorobca/cipriancorobca.github.io","_blank");
     }
