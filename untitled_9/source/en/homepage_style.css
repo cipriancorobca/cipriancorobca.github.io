@@ -30,6 +30,11 @@ body
     vertical-align:middle;
 }
 
+button
+{
+    cursor: pointer;
+}
+
 /*  blocuri
     bara de titlu    */
 
@@ -38,8 +43,7 @@ body
     text-align:center; 
     margin-top:-100px; 
     width:100%; 
-    height:120px; 
-    margin-bottom:150px;
+    margin-bottom:30px;
 }
 
 /*  blocul central si blocurile cu continut  */
@@ -57,7 +61,7 @@ body
     display:flex; 
     align-items:center; 
     justify-content:center;
-    margin-top:150px;
+    margin-top:10px;
 }
 
 #comingsoon
@@ -120,7 +124,17 @@ body
 {
     color:#ed6b5b;
     font-size:100px; 
-    font-family:Leelawadee;
+    font-family:Gowun Dodum;
+    margin-bottom:0;
+}
+
+#subtitle
+{
+    color:#ed6b5b;
+    font-size:30px; 
+    font-family:Gowun Dodum;
+    margin-top:-30px;
+    margin-bottom:-20px;
 }
 
 #titlelink
@@ -156,6 +170,30 @@ body
 .findout:hover
 {
     color:#c36b84;
+}
+
+/* return to main screen button*/
+
+#tomain
+{
+    font-size:33px;
+    color:#3a3e59;
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    margin-bottom:-5%;
+    margin-top:-2%;
+    margin-left:-98%;
+    background: none;
+    border:none;
+    transition: all 0.2s;
+}
+
+#tomain:hover
+{
+    color:#f9ac66;
 }
 
 /*  info in content    */

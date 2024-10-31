@@ -100,13 +100,17 @@ function Showcs()
     document.getElementById('tall').style.display = "none";
     document.getElementById('imager').style.display = "none";
     document.getElementById('calc').style.display = "none";
-    setTimeout(Hidecs,7227);
+    document.getElementById('maindiv1').style.display = "none";
+    document.getElementById('maindiv2').style.display = "none";
+    setTimeout(Hidecs,2552);
     window.scrollTo(0,document.body.scrollHeight);
 }
 
 function Hidecs()
 {
     document.getElementById('comingsoon').style.display = "none";
+    document.getElementById('maindiv1').style.display = "flex";
+    document.getElementById('maindiv2').style.display = "flex";
 }
 
 //  'tall'
@@ -121,6 +125,8 @@ function Showtall()
     document.getElementById('calc').style.display = "none";
     document.getElementById('selecta1').value = "none";
     document.getElementById('selecta15').value = "none";
+    document.getElementById('maindiv1').style.display = "none";
+    document.getElementById('maindiv2').style.display = "none";
     document.getElementById('her').value = "";
     document.getElementById('him').value = "";
     window.scrollTo(0,document.body.scrollHeight);
@@ -137,6 +143,8 @@ function Showimg()
     document.getElementById('tall').style.display = "none";
     document.getElementById('calc').style.display = "none";
     document.getElementById('imgresult').style.display = "none";
+    document.getElementById('maindiv1').style.display = "none";
+    document.getElementById('maindiv2').style.display = "none";
     document.getElementById('fileint').value = "";
     window.scrollTo(0,document.body.scrollHeight);
 }
@@ -148,7 +156,21 @@ function Showcalc()
     document.getElementById('comingsoon').style.display = "none";
     document.getElementById('tall').style.display = "none";
     document.getElementById('imager').style.display = "none";
+    document.getElementById('maindiv1').style.display = "none";
+    document.getElementById('maindiv2').style.display = "none";
     window.scrollTo(0,document.body.scrollHeight);
+}
+
+//  return to main
+
+function ToMain()
+{
+    document.getElementById('calc').style.display = "none";
+    document.getElementById('comingsoon').style.display = "none";
+    document.getElementById('imager').style.display = "none";
+    document.getElementById('tall').style.display = "none";
+    document.getElementById('maindiv1').style.display = "flex";
+    document.getElementById('maindiv2').style.display = "flex";
 }
 
 //  gay
