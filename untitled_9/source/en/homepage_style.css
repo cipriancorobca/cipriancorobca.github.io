@@ -169,31 +169,7 @@ button
 
 .findout:hover
 {
-    color:#c36b84;
-}
-
-/* return to main screen button*/
-
-#tomain
-{
-    font-size:33px;
-    color:#3a3e59;
-    -moz-transform: scale(-1, 1);
-    -webkit-transform: scale(-1, 1);
-    -o-transform: scale(-1, 1);
-    -ms-transform: scale(-1, 1);
-    transform: scale(-1, 1);
-    margin-bottom:-5%;
-    margin-top:-2%;
-    margin-left:-98%;
-    background: none;
-    border:none;
-    transition: all 0.2s;
-}
-
-#tomain:hover
-{
-    color:#f9ac66;
+    color:#c36b84 !important;
 }
 
 /*  info in content    */
@@ -268,12 +244,12 @@ button
 
 .textint:hover
 {
-    color:#c36b84;
+    color:#c36b84 !important;
 }
 
 .textint:focus
 {
-    color:#c36b84;
+    color:#c36b84 !important;
 }
 
 .divint
@@ -288,6 +264,39 @@ button
 {
     width:25px;
     height:25px;
+}
+
+/* return button */
+
+#tomain
+{
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    width:45px; 
+    height:45px; 
+    border:none; 
+    border-radius:50%; 
+    margin-left:25px;
+    margin-top:25px;
+    position:fixed;
+    top:0;
+    left:70px;
+    background-color:white;
+    color:black;
+    display:none;
+    font-size:25px;
+    transition:0.25s;
+}
+
+#tomain:hover
+{
+    width:60px;
+    height:60px;
+    margin-left:17.5px;
+    margin-top:17.5px;
 }
 
 /*  buton de tema   */
@@ -481,8 +490,8 @@ button
 
 .equals:active
 {
-    background-color: #3a3e59;
-    color:#c36b84;
+    background-color: #3a3e59 !important;
+    color:#c36b84 !important;
 }
 
 .nums
@@ -501,7 +510,7 @@ button
 
 .nums:active
 {
-    color:#f9ac66;
+    color:#f9ac66 !important;
 }
 
 .formula
@@ -529,7 +538,7 @@ button
 
 .conferma:hover
 {
-    color:#c36b84;
+    color:#c36b84 !important;
 }
 
 #c1,#c2,#retry1,#retry2

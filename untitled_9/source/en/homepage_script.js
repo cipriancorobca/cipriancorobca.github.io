@@ -102,6 +102,7 @@ function Showcs()
     document.getElementById('calc').style.display = "none";
     document.getElementById('maindiv1').style.display = "none";
     document.getElementById('maindiv2').style.display = "none";
+    document.getElementById('tomain').style.display = "block";
     setTimeout(Hidecs,2552);
     window.scrollTo(0,document.body.scrollHeight);
 }
@@ -109,6 +110,7 @@ function Showcs()
 function Hidecs()
 {
     document.getElementById('comingsoon').style.display = "none";
+    document.getElementById('tomain').style.display = "none";
     document.getElementById('maindiv1').style.display = "flex";
     document.getElementById('maindiv2').style.display = "flex";
 }
@@ -127,6 +129,7 @@ function Showtall()
     document.getElementById('selecta15').value = "none";
     document.getElementById('maindiv1').style.display = "none";
     document.getElementById('maindiv2').style.display = "none";
+    document.getElementById('tomain').style.display = "block";
     document.getElementById('her').value = "";
     document.getElementById('him').value = "";
     window.scrollTo(0,document.body.scrollHeight);
@@ -145,6 +148,7 @@ function Showimg()
     document.getElementById('imgresult').style.display = "none";
     document.getElementById('maindiv1').style.display = "none";
     document.getElementById('maindiv2').style.display = "none";
+    document.getElementById('tomain').style.display = "block";
     document.getElementById('fileint').value = "";
     window.scrollTo(0,document.body.scrollHeight);
 }
@@ -158,6 +162,7 @@ function Showcalc()
     document.getElementById('imager').style.display = "none";
     document.getElementById('maindiv1').style.display = "none";
     document.getElementById('maindiv2').style.display = "none";
+    document.getElementById('tomain').style.display = "block";
     window.scrollTo(0,document.body.scrollHeight);
 }
 
@@ -169,6 +174,7 @@ function ToMain()
     document.getElementById('comingsoon').style.display = "none";
     document.getElementById('imager').style.display = "none";
     document.getElementById('tall').style.display = "none";
+    document.getElementById('tomain').style.display = "none";
     document.getElementById('maindiv1').style.display = "flex";
     document.getElementById('maindiv2').style.display = "flex";
 }
@@ -258,10 +264,12 @@ function Imageres()
 
 function Themeswitch1()
 {
-    //theme and language buttons
+    //theme,return and language buttons
     document.getElementById('white').style.display = "none";
     document.getElementById('black').style.display = "block";
     document.getElementById('lang').style.backgroundColor = "black";
+    document.getElementById('tomain').style.backgroundColor = "black";
+    document.getElementById('tomain').style.color = "white";
 
     //background
     document.getElementsByTagName('body')[0].className = "white-mode";
@@ -294,6 +302,7 @@ function Themeswitch1()
     document.getElementById('res1').style.color = "#454144";
     document.getElementById('res2').style.color = "#454144";
     document.getElementById('res21').style.color = "#454144";
+    document.getElementById('subtitle').style.color = "#1995AD";
 
     //inputs
     document.getElementById('findout1').style.backgroundColor = "#F1F1F2";
@@ -359,10 +368,12 @@ function Themeswitch1()
 
 function Themeswitch2()
 {
-    //theme and language buttons
+    //theme,return and language buttons
     document.getElementById('white').style.display = "block";
     document.getElementById('black').style.display = "none";
     document.getElementById('lang').style.backgroundColor = "white";
+    document.getElementById('tomain').style.backgroundColor = "white";
+    document.getElementById('tomain').style.color = "black";
 
     //background
     document.getElementsByTagName('body')[0].className = "purple-mode";
@@ -395,6 +406,7 @@ function Themeswitch2()
     document.getElementById('res1').style.color = "#3a3e59";
     document.getElementById('res2').style.color = "#3a3e59";
     document.getElementById('res21').style.color = "#3a3e59";
+    document.getElementById('subtitle').style.color = "#ed6b5b";
 
     //inputs
     document.getElementById('findout1').style.backgroundColor = "#f9ac66";
