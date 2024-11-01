@@ -92,16 +92,48 @@ function DisableCalcButtons()
     document.getElementById('c4').disabled = true;
 }
 
-//  coming soon
+//  redirect
 
-function Showcs()
+function Showredirect(a)
 {
-    document.getElementById('comingsoon').style.display = "block";
+    document.getElementById('comingsoon').style.display = "none";
+    document.getElementById('redirect').style.display = "block";
     document.getElementById('tall').style.display = "none";
     document.getElementById('imager').style.display = "none";
     document.getElementById('calc').style.display = "none";
     document.getElementById('maindiv1').style.display = "none";
     document.getElementById('maindiv2').style.display = "none";
+    document.getElementById('maindiv3').style.display = "none";
+    document.getElementById('tomain').style.display = "block";
+
+    setTimeout(() => {
+        switch(a)
+        {
+            case 1:
+            {
+                window.open("https://tryit-vopz.onrender.com","_blank");
+            }
+
+            case 2:
+            {
+                window.open("../../resources/css_boxes/index.html","_blank");
+            }
+        }
+    },2552);
+}
+
+//  coming soon
+
+function Showcs()
+{
+    document.getElementById('comingsoon').style.display = "block";
+    document.getElementById('redirect').style.display = "none";
+    document.getElementById('tall').style.display = "none";
+    document.getElementById('imager').style.display = "none";
+    document.getElementById('calc').style.display = "none";
+    document.getElementById('maindiv1').style.display = "none";
+    document.getElementById('maindiv2').style.display = "none";
+    document.getElementById('maindiv3').style.display = "none";
     document.getElementById('tomain').style.display = "block";
     setTimeout(Hidecs,2552);
     window.scrollTo(0,document.body.scrollHeight);
@@ -113,6 +145,7 @@ function Hidecs()
     document.getElementById('tomain').style.display = "none";
     document.getElementById('maindiv1').style.display = "flex";
     document.getElementById('maindiv2').style.display = "flex";
+    document.getElementById('maindiv3').style.display = "flex";
 }
 
 //  'tall'
@@ -120,6 +153,7 @@ function Hidecs()
 function Showtall()
 {
     document.getElementById('tall').style.display = "block";
+    document.getElementById('redirect').style.display = "none";
     document.getElementById('comingsoon').style.display = "none";
     document.getElementById('tallproc').style.display = "block";
     document.getElementById('tallresult').style.display = "none";
@@ -129,6 +163,7 @@ function Showtall()
     document.getElementById('selecta15').value = "none";
     document.getElementById('maindiv1').style.display = "none";
     document.getElementById('maindiv2').style.display = "none";
+    document.getElementById('maindiv3').style.display = "none";
     document.getElementById('tomain').style.display = "block";
     document.getElementById('her').value = "";
     document.getElementById('him').value = "";
@@ -142,12 +177,14 @@ function Showimg()
     document.getElementById('imager').style.display = "block";
     document.getElementById('imgproc').style.display = "block";
     document.getElementById('comingsoon').style.display = "none";
+    document.getElementById('redirect').style.display = "none";
     document.getElementById('tallproc').style.display = "block";
     document.getElementById('tall').style.display = "none";
     document.getElementById('calc').style.display = "none";
     document.getElementById('imgresult').style.display = "none";
     document.getElementById('maindiv1').style.display = "none";
     document.getElementById('maindiv2').style.display = "none";
+    document.getElementById('maindiv3').style.display = "none";
     document.getElementById('tomain').style.display = "block";
     document.getElementById('fileint').value = "";
     window.scrollTo(0,document.body.scrollHeight);
@@ -158,10 +195,12 @@ function Showcalc()
     
     document.getElementById('calc').style.display = "block";
     document.getElementById('comingsoon').style.display = "none";
+    document.getElementById('redirect').style.display = "none";
     document.getElementById('tall').style.display = "none";
     document.getElementById('imager').style.display = "none";
     document.getElementById('maindiv1').style.display = "none";
     document.getElementById('maindiv2').style.display = "none";
+    document.getElementById('maindiv3').style.display = "none";
     document.getElementById('tomain').style.display = "block";
     window.scrollTo(0,document.body.scrollHeight);
 }
@@ -172,11 +211,13 @@ function ToMain()
 {
     document.getElementById('calc').style.display = "none";
     document.getElementById('comingsoon').style.display = "none";
+    document.getElementById('redirect').style.display = "none";
     document.getElementById('imager').style.display = "none";
     document.getElementById('tall').style.display = "none";
     document.getElementById('tomain').style.display = "none";
     document.getElementById('maindiv1').style.display = "flex";
     document.getElementById('maindiv2').style.display = "flex";
+    document.getElementById('maindiv3').style.display = "flex";
 }
 
 //  gay
@@ -283,7 +324,10 @@ function Themeswitch1()
     document.getElementById('content2').style.backgroundColor = "#A1D6E2";
     document.getElementById('content3').style.backgroundColor = "#A1D6E2";
     document.getElementById('content4').style.backgroundColor = "#A1D6E2";
+    document.getElementById('content5').style.backgroundColor = "#A1D6E2";
+    document.getElementById('content6').style.backgroundColor = "#A1D6E2";
     document.getElementById('comingsoon').style.backgroundColor = "#A1D6E2";
+    document.getElementById('redirect').style.backgroundColor = "#A1D6E2";
     document.getElementById('tall').style.backgroundColor = "#A1D6E2";
     document.getElementById('imager').style.backgroundColor = "#A1D6E2";
     document.getElementById('calc').style.backgroundColor = "#A1D6E2";
@@ -293,7 +337,10 @@ function Themeswitch1()
     document.getElementById('info2').style.color = "#454144";
     document.getElementById('info3').style.color = "#454144";
     document.getElementById('info4').style.color = "#454144";
+    document.getElementById('info5').style.color = "#454144";
+    document.getElementById('info6').style.color = "#454144";
     document.getElementById('infocs').style.color = "#454144";
+    document.getElementById('inforedir').style.color = "#454144";
     document.getElementById('cnf1').style.color = "#454144";
     document.getElementById('cnf2').style.color = "#454144";
     document.getElementById('cnf4').style.color = "#454144";
@@ -313,6 +360,10 @@ function Themeswitch1()
     document.getElementById('findout3').style.color = "#454144";
     document.getElementById('findout4').style.backgroundColor = "#F1F1F2";
     document.getElementById('findout4').style.color = "#454144";
+    document.getElementById('findout5').style.backgroundColor = "#F1F1F2";
+    document.getElementById('findout5').style.color = "#454144";
+    document.getElementById('findout6').style.backgroundColor = "#F1F1F2";
+    document.getElementById('findout6').style.color = "#454144";
     document.getElementById('c1').style.backgroundColor = "#F1F1F2";
     document.getElementById('c1').style.color = "#454144";
     document.getElementById('c2').style.backgroundColor = "#F1F1F2";
@@ -387,7 +438,10 @@ function Themeswitch2()
     document.getElementById('content2').style.backgroundColor = "#ed6b5b";
     document.getElementById('content3').style.backgroundColor = "#ed6b5b";
     document.getElementById('content4').style.backgroundColor = "#ed6b5b";
+    document.getElementById('content5').style.backgroundColor = "#ed6b5b";
+    document.getElementById('content6').style.backgroundColor = "#ed6b5b";
     document.getElementById('comingsoon').style.backgroundColor = "#ed6b5b";
+    document.getElementById('redirect').style.backgroundColor = "#ed6b5b";
     document.getElementById('tall').style.backgroundColor = "#ed6b5b";
     document.getElementById('imager').style.backgroundColor = "#ed6b5b";
     document.getElementById('calc').style.backgroundColor = "#ed6b5b";
@@ -397,7 +451,10 @@ function Themeswitch2()
     document.getElementById('info2').style.color = "#3a3e59";
     document.getElementById('info3').style.color = "#3a3e59";
     document.getElementById('info4').style.color = "#3a3e59";
+    document.getElementById('info5').style.color = "#3a3e59";
+    document.getElementById('info6').style.color = "#3a3e59";
     document.getElementById('infocs').style.color = "#3a3e59";
+    document.getElementById('inforedir').style.color = "#3a3e59";
     document.getElementById('cnf1').style.color = "#3a3e59";
     document.getElementById('cnf2').style.color = "#3a3e59";
     document.getElementById('cnf4').style.color = "#3a3e59";
@@ -417,6 +474,10 @@ function Themeswitch2()
     document.getElementById('findout3').style.color = "#3a3e59";
     document.getElementById('findout4').style.backgroundColor = "#f9ac66";
     document.getElementById('findout4').style.color = "#3a3e59";
+    document.getElementById('findout5').style.backgroundColor = "#f9ac66";
+    document.getElementById('findout5').style.color = "#3a3e59";
+    document.getElementById('findout6').style.backgroundColor = "#f9ac66";
+    document.getElementById('findout6').style.color = "#3a3e59";
     document.getElementById('c1').style.backgroundColor = "#f9ac66";
     document.getElementById('c1').style.color = "#3a3e59";
     document.getElementById('c2').style.backgroundColor = "#f9ac66";

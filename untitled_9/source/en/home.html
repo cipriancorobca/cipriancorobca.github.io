@@ -22,46 +22,67 @@
             <p id="subtitle">by Ciprian Corobca</p>
         </div>
         
-        
         <div id="maindiv1" class="maindiv">
             <div id="content1" class="content">
-                <img src="../../resources/does_img_fit.gif" width="256" height="192" class="imagery">
+                <img src="../../resources/conputer.gif" width="256" height="192" class="imagery">
                 
-                <p class="info" id="info1">Does your image fit your desktop properly?</p><br>
+                <p class="info" id="info1">We made a game about building computers<sup>↗</sup></p><br>
 
-                <button id="findout1" class="findout" onclick="Showimg()">Find out!</button>
+                <button id="findout1" class="findout" onclick="Showredirect(1)">Let's play it!</button>
             </div>
             
             <div id="content2" class="content">
-                <img src="../../resources/wrong_calc.gif" width="256" height="192" class="imagery">
+                <img src="../../resources/boxes.gif" width="256" height="192" class="imagery">
                 
-                <p class="info" id="info2">We have a calculator that gives wrong answers</p><br>
+                <p class="info" id="info2">Design the building blocks of your website<sup>↗</sup></p><br>
 
-                <button id="findout2" class="findout" onclick="Showcalc()">Try it!</button>
+                <button id="findout2" class="findout" onclick="Showredirect(2)">Find out!</button>
             </div>
         </div>
         
         <div id="maindiv2" class="maindiv">
             <div id="content3" class="content">
+                <img src="../../resources/does_img_fit.gif" width="256" height="192" class="imagery">
+                
+                <p class="info" id="info3">Does your image fit your desktop properly?</p><br>
+
+                <button id="findout3" class="findout" onclick="Showimg()">Find out!</button>
+            </div>
+            
+            <div id="content4" class="content">
+                <img src="../../resources/wrong_calc.gif" width="256" height="192" class="imagery">
+                
+                <p class="info" id="info4">We have a calculator that gives wrong answers</p><br>
+
+                <button id="findout4" class="findout" onclick="Showcalc()">Try it!</button>
+            </div>
+        </div>
+        
+        <div id="maindiv3" class="maindiv">
+            <div id="content5" class="content">
                 <img src="../../resources/tall.gif" width="256" height="192" class="imagery">
                 
-                <p class="info" id="info3">How tall will your child be?</p><br>
+                <p class="info" id="info5">How tall will your child be?</p><br>
 
-                <button id="findout3" class="findout" onclick="Showtall()">Tell me!</button>
+                <button id="findout5" class="findout" onclick="Showtall()">Tell me!</button>
             </div>
 
-            <div id="content4" class="content">
+            <div id="content6" class="content">
                 <img src="../../resources/font.gif" width="256" height="192" class="imagery">
                 
-                <p class="info" id="info4">What fonts does your document use?</p><br>
+                <p class="info" id="info6">What fonts does your document use?</p><br>
 
-                <button id="findout4" class="findout" onclick="Showcs()">I'm interested!</button>
+                <button id="findout6" class="findout" onclick="Showcs()">I'm interested!</button>
             </div>
         </div>
 
         <div id="contentdiv">
             <div id="comingsoon" style="display:none;">
                 <p class="info" id="infocs">This feature is not yet available.</p>
+            </div>
+
+            <div id="redirect" style="display:none;">
+                <p class="info" id="inforedir">You will be take to a new tab.</p>
             </div>
 
             <div id="tall" style="display:none;">

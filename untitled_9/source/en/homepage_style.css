@@ -74,6 +74,16 @@ button
     border-radius:10px;
 }
 
+#redirect
+{
+    text-align:center; 
+    width:435px;
+    background-color:#ed6b5b; 
+    padding:5px; 
+    margin:15px;
+    border-radius:10px;
+}
+
 #tall
 {
     text-align:center; 
