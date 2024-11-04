@@ -55,21 +55,81 @@ function Tallreslt()
 
 function Calcreslt()
 {
-    if(dotUsed)
+    let splitFormula = formulaString.match(/[^\d.]+|[\d.]+/g);
+
+    for(let e = 0; e < splitFormula.length;)
     {
-        calcres = Math.random()*46387595;
-        document.getElementById('formula').innerHTML = calcres;
-        formulaString = "";
-        DisableCalcButtons()
+        if(splitFormula[e] == "×" || splitFormula[e] == "÷")
+        {
+            if(splitFormula[e] == "×")
+            {
+                var tmp = splitFormula[e-1] * splitFormula[e+1];
+                splitFormula.splice(e-1,3,tmp.toString());
+            }
+                
+            if(splitFormula[e] == "÷")
+            {
+                if(splitFormula[e+1] == "0")
+                {
+                    formulaString = "Illegal division by 0";
+                    document.getElementById('formula').innerHTML = formulaString;
+                    document.getElementById('formula').scrollTop = document.getElementById('formula').scrollHeight;
+                    zeroDiv = true;
+                    return;
+                }
+
+                else
+                {
+                    var tmp = splitFormula[e-1] / splitFormula[e+1];
+                    splitFormula.splice(e-1,3,tmp.toString());
+                }
+            }
+        }
+
+        else
+        {
+            e++;
+        }
     }
 
-    else
+    for(let e = 0; e < splitFormula.length;)
     {
-        calcres = Math.floor(Math.random()*46387595);
-        document.getElementById('formula').innerHTML = calcres;
-        formulaString = "";
-        DisableCalcButtons()
+        if(splitFormula[e] == "+" || splitFormula[e] == "-")
+        {
+            if(splitFormula[e] == "+")
+            {
+                var tmp = parseFloat(splitFormula[e-1]) + parseFloat(splitFormula[e+1]);
+                splitFormula.splice(e-1,3,tmp.toString());
+            }
+                
+            if(splitFormula[e] == "-")
+            {
+                var tmp = parseFloat(splitFormula[e-1]) - parseFloat(splitFormula[e+1]);
+                splitFormula.splice(e-1,3,tmp.toString());
+            }
+        }
+
+        else
+        {
+            e++;
+        }
     }
+
+    calcres = splitFormula;
+
+    if(Math.random() > 0.03)
+    {
+        errorMargin = (Math.random()*0.12)-0.06;
+
+        if(!dotUsed)
+            calcres = parseFloat(calcres * (1+errorMargin)).toFixed(4);
+
+        else
+        calcres *= (1+errorMargin)
+    }
+
+    document.getElementById('formula').innerHTML = calcres;
+    formulaString = "";
 }
 
 function DisableCalcButtons()
@@ -536,6 +596,7 @@ function Themeswitch2()
 function PressCalcNumButton(a)
 {
     opUsed = false;
+    calcres = undefined;
     formulaString += a;
     document.getElementById('formula').innerHTML = formulaString;
     document.getElementById('formula').scrollTop = document.getElementById('formula').scrollHeight;
@@ -545,6 +606,12 @@ function PressCalcOpButton(a)
 {
     if(!opUsed)
     {
+        if(calcres != null)
+        {
+            formulaString = calcres;
+            calcres = undefined;
+        }
+
         opUsed = true;
         dotUsed = false;
         formulaString += a;
@@ -557,6 +624,12 @@ function PressCalcDotButton()
 {
     if(!dotUsed)
     {
+        if(calcres != null)
+        {
+            formulaString = calcres;
+            calcres = undefined;
+        }
+
         dotUsed = true;
         
         if(document.getElementById('formula').innerHTML == "" ||
