@@ -74,6 +74,16 @@ button
     border-radius:10px;
 }
 
+#infodiv
+{
+    text-align:center; 
+    width:435px;
+    background-color:#ed6b5b; 
+    padding:5px; 
+    margin:15px;
+    border-radius:10px;
+}
+
 #redirect
 {
     text-align:center; 
@@ -151,6 +161,7 @@ button
 {
     text-decoration: none;
     color:#ed6b5b;
+    cursor: pointer;
 }
 
 #titlelink:visited
@@ -395,7 +406,7 @@ button
 {
     margin-left:12.5px;
     width:70px;
-    height:182px;
+    height:238px;
     border-radius:35px;
 }
 
@@ -406,6 +417,12 @@ button
 }
 
 .btnanim3:hover > #ro
+{
+    visibility: visible;
+    transition-delay: 0.11s;
+}
+
+.btnanim3:hover > #sk
 {
     visibility: visible;
     transition-delay: 0.11s;
@@ -453,6 +470,19 @@ button
     margin-top:10px;
     margin-left:2px;
     background-image: url("../../resources/it.png");
+    visibility: hidden;
+}
+
+#sk
+{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background-color: aqua;
+    margin-top:10px;
+    margin-left:2px;
+    background-image: url("../../resources/sk.png");
     visibility: hidden;
 }
 

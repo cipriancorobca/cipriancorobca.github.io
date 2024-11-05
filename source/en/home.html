@@ -17,7 +17,7 @@
     <body lang="en" class="purple-mode">
         <div id="upperdiv">
             <p id="titolo">
-                <a href="home.html" id="titlelink">Untitled 9</a>
+                <a onclick="Showinfo()" id="titlelink">Untitled 9</a>
             </p>
             <p id="subtitle">by Ciprian Corobca</p>
         </div>
@@ -79,6 +79,11 @@
         <div id="contentdiv">
             <div id="comingsoon" style="display:none;">
                 <p class="info" id="infocs">This feature is not yet available.</p>
+            </div>
+
+            <div id="infodiv" style="display:none;">
+                <p class="info" id="infoabout">My name is Ciprian.I am a web developer.I put together all my personal projects into this website for you to have fun with.</p><br>
+                <p class="info" id="infoemail">Contact me:<span style="text-decoration: underline;">cipriancorobcacc@pm.me</span></p>
             </div>
 
             <div id="redirect" style="display:none;">
@@ -187,7 +192,8 @@
         <div class="btnanim3" id="lang">
             <button id="en"></button><br>
             <button id="ro" onclick="Romanian()"></button><br>
-            <button id="it" onclick="Italian()"></button>
+            <button id="it" onclick="Italian()"></button><br>
+            <button id="sk" onclick="Slovak()"></button>
         </div>
     </body>
 </html>

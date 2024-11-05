@@ -11,9 +11,9 @@ function Italian()
     document.location.replace('../it/home.html');
 }
 
-function Slovak()
+function English()
 {
-    document.location.replace('../sk/home.html');
+    document.location.replace('../en/home.html');
 }
 
 var formulaString = "";
@@ -312,7 +312,7 @@ function Gay()
 
     if(e == "gay")
     {
-        alert("Warning!Gays are not supported on this website\nClosing...");
+        alert("Pozor!Homosexuáli nie sú podporovaní na tento webu\nUzatváracie...");
         setTimeout(window.close(),701);
     }
 }
@@ -357,7 +357,7 @@ function Imageres()
             else if(wh < 1)
             {
                 document.getElementById('res2').innerHTML = "" + w + "x" + h;
-                document.getElementById('res21').innerHTML = "Vertical";
+                document.getElementById('res21').innerHTML = "Vertikálny";
             }
 
             else if(wh == 2.3333333333333333)

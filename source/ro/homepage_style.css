@@ -30,6 +30,11 @@ body
     vertical-align:middle;
 }
 
+button
+{
+    cursor: pointer;
+}
+
 /*  blocuri
     bara de titlu    */
 
@@ -38,8 +43,7 @@ body
     text-align:center; 
     margin-top:-100px; 
     width:100%; 
-    height:120px; 
-    margin-bottom:150px;
+    margin-bottom:30px;
 }
 
 /*  blocul central si blocurile cu continut  */
@@ -57,10 +61,30 @@ body
     display:flex; 
     align-items:center; 
     justify-content:center;
-    margin-top:150px;
+    margin-top:10px;
 }
 
 #comingsoon
+{
+    text-align:center; 
+    width:435px;
+    background-color:#ed6b5b; 
+    padding:5px; 
+    margin:15px;
+    border-radius:10px;
+}
+
+#infodiv
+{
+    text-align:center; 
+    width:435px;
+    background-color:#ed6b5b; 
+    padding:5px; 
+    margin:15px;
+    border-radius:10px;
+}
+
+#redirect
 {
     text-align:center; 
     width:435px;
@@ -120,13 +144,24 @@ body
 {
     color:#ed6b5b;
     font-size:100px; 
-    font-family:Leelawadee;
+    font-family:Gowun Dodum;
+    margin-bottom:0;
+}
+
+#subtitle
+{
+    color:#ed6b5b;
+    font-size:30px; 
+    font-family:Gowun Dodum;
+    margin-top:-30px;
+    margin-bottom:-20px;
 }
 
 #titlelink
 {
     text-decoration: none;
     color:#ed6b5b;
+    cursor: pointer;
 }
 
 #titlelink:visited
@@ -155,7 +190,7 @@ body
 
 .findout:hover
 {
-    color:#c36b84;
+    color:#c36b84 !important;
 }
 
 /*  info in content    */
@@ -230,12 +265,12 @@ body
 
 .textint:hover
 {
-    color:#c36b84;
+    color:#c36b84 !important;
 }
 
 .textint:focus
 {
-    color:#c36b84;
+    color:#c36b84 !important;
 }
 
 .divint
@@ -250,6 +285,39 @@ body
 {
     width:25px;
     height:25px;
+}
+
+/* return button */
+
+#tomain
+{
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    width:45px; 
+    height:45px; 
+    border:none; 
+    border-radius:50%; 
+    margin-left:25px;
+    margin-top:25px;
+    position:fixed;
+    top:0;
+    left:70px;
+    background-color:white;
+    color:black;
+    display:none;
+    font-size:25px;
+    transition:0.25s;
+}
+
+#tomain:hover
+{
+    width:60px;
+    height:60px;
+    margin-left:17.5px;
+    margin-top:17.5px;
 }
 
 /*  buton de tema   */
@@ -338,7 +406,7 @@ body
 {
     margin-left:12.5px;
     width:70px;
-    height:182px;
+    height:238px;
     border-radius:35px;
 }
 
@@ -354,23 +422,16 @@ body
     transition-delay: 0.11s;
 }
 
+.btnanim3:hover > #sk
+{
+    visibility: visible;
+    transition-delay: 0.11s;
+}
+
 .btnanim3:hover > #ro
 {
     margin-top:10px;
     margin-left:2px;
-}
-
-#en
-{
-    width:45px;
-    height:45px;
-    border:none;
-    border-radius:50%;
-    background-color: aqua;
-    margin-top:10px;
-    margin-left:2px;
-    background-image: url("../../resources/en.png");
-    visibility: hidden;
 }
 
 #ro
@@ -386,6 +447,19 @@ body
     transition: all 0.3s;
 }
 
+#en
+{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background-color: aqua;
+    margin-top:10px;
+    margin-left:2px;
+    background-image: url("../../resources/en.png");
+    visibility: hidden;
+}
+
 #it
 {
     width:45px;
@@ -396,6 +470,19 @@ body
     margin-top:10px;
     margin-left:2px;
     background-image: url("../../resources/it.png");
+    visibility: hidden;
+}
+
+#sk
+{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background-color: aqua;
+    margin-top:10px;
+    margin-left:2px;
+    background-image: url("../../resources/sk.png");
     visibility: hidden;
 }
 
@@ -443,8 +530,8 @@ body
 
 .equals:active
 {
-    background-color: #3a3e59;
-    color:#c36b84;
+    background-color: #3a3e59 !important;
+    color:#c36b84 !important;
 }
 
 .nums
@@ -463,7 +550,7 @@ body
 
 .nums:active
 {
-    color:#f9ac66;
+    color:#f9ac66 !important;
 }
 
 .formula
@@ -491,10 +578,10 @@ body
 
 .conferma:hover
 {
-    color:#c36b84;
+    color:#c36b84 !important;
 }
 
-#c2,#retry1,#retry2
+#c1,#c2,#retry1,#retry2
 {
     width:300px;
 }

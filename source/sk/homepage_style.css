@@ -410,7 +410,7 @@ button
     border-radius:35px;
 }
 
-.btnanim3:hover > #en
+.btnanim3:hover > #it
 {
     visibility: visible;
     transition-delay: 0.11s;
@@ -422,13 +422,13 @@ button
     transition-delay: 0.11s;
 }
 
-.btnanim3:hover > #sk
+.btnanim3:hover > #en
 {
     visibility: visible;
     transition-delay: 0.11s;
 }
 
-.btnanim3:hover > #it
+.btnanim3:hover > #sk
 {
     margin-top:10px;
     margin-left:2px;
@@ -467,10 +467,10 @@ button
     border:none;
     border-radius:50%;
     background-color: aqua;
-    margin-top:0px;
-    margin-left:0px;
+    margin-top:10px;
+    margin-left:2px;
     background-image: url("../../resources/it.png");
-    transition: all 0.3s;
+    visibility: hidden;
 }
 
 #sk
@@ -480,10 +480,10 @@ button
     border:none;
     border-radius:50%;
     background-color: aqua;
-    margin-top:10px;
-    margin-left:2px;
+    margin-top:0px;
+    margin-left:0px;
     background-image: url("../../resources/sk.png");
-    visibility: hidden;
+    transition: all 0.3s;
 }
 
 /*  fundal  */
