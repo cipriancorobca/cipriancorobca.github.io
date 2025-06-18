@@ -26,160 +26,51 @@
             <div id="content1" class="content">
                 <img src="../../resources/conputer.gif" width="256" height="192" class="imagery">
                 
-                <p class="info" id="info1">Am creat un joc despre asamblarea calculatoa- relor<sup title="Opțiunea dată te va duce la un tab nou">↗</sup></p><br>
+                <p class="info" id="info1">Am creat un joc despre asemplarea de calculatoare<sup title="Asta vă va duce către o nouă pagină">↗</sup></p><br>
 
-                <button id="findout1" class="findout" onclick="Showredirect(1)">Hai să-l jucăm!</button>
+                <button id="findout1" class="findout" onclick="Showredirect(1)">Joacă-l!</button>
             </div>
             
+            
             <div id="content2" class="content">
-                <img src="../../resources/boxes.gif" width="256" height="192" class="imagery">
+                <img src="../../resources/time_stock.gif" width="256" height="192" class="imagery">
                 
-                <p class="info" id="info2">Creează blocurile de bază pentru site-ul tău<sup title="Opțiunea dată te va duce la un tab nou">↗</sup></p><br>
+                <p class="info" id="info2">Încercați noul nostru calculator temporal<sup title="Asta vă va duce către o nouă pagină">↗</sup></p><br>
 
-                <button id="findout2" class="findout" onclick="Showredirect(2)">Descoperă-l!</button>
+                <button id="findout2" class="findout" onclick="Showredirect(2)">Încearcă-l!</button>
             </div>
         </div>
         
         <div id="maindiv2" class="maindiv">
             <div id="content3" class="content">
-                <img src="../../resources/does_img_fit.gif" width="256" height="192" class="imagery">
+                <img src="../../resources/boxes.gif" width="256" height="192" class="imagery">
                 
-                <p class="info" id="info3">Imaginea ta încape pe desktop-ul tău?</p><br>
+                <p class="info" id="info3">Creați piesele de bază a site-ului dvs.<sup title="Asta vă va duce către o nouă pagină">↗</sup></p><br>
 
-                <button id="findout3" class="findout" onclick="Showimg()">Află!</button>
+                <button id="findout3" class="findout" onclick="Showredirect(3)">Să vedem!</button>
             </div>
-            
+
             <div id="content4" class="content">
-                <img src="../../resources/wrong_calc.gif" width="256" height="192" class="imagery">
+                <img src="../../resources/language.gif" width="256" height="192" class="imagery">
                 
-                <p class="info" id="info4">Avem un calculator care dă răspunsuri greșite</p><br>
+                <p class="info" id="info4">Cât timp îți va lua să înveți o limbă nouă?</p><br>
 
-                <button id="findout4" class="findout" onclick="Showcalc()">Încearcă-l!</button>
-            </div>
-        </div>
-        
-        <div id="maindiv3" class="maindiv">
-            <div id="content5" class="content">
-                <img src="../../resources/tall.gif" width="256" height="192" class="imagery">
-                
-                <p class="info" id="info5">Căt de înalt va fi copilul tău?</p><br>
-
-                <button id="findout5" class="findout" onclick="Showtall()">Spune-mi!</button>
-            </div>
-
-            <div id="content6" class="content">
-                <img src="../../resources/time_stock.gif" width="256" height="192" class="imagery">
-                
-                <p class="info" id="info6">Încearcă noul nostru calculator a timpului</p><br>
-
-                <button id="findout6" class="findout" onclick="Showcs()">Încearcă-l!</button>
+                <button id="findout4" class="findout" onclick="Showcs()">Spune-mi!</button>
             </div>
         </div>
 
         <div id="contentdiv">
             <div id="comingsoon" style="display:none;">
-                <p class="info" id="infocs">Opțiunea asta nu este încă disponibilă.</p>
+                <p class="info" id="infocs">Această opțiune nu este încă disponibilă.</p>
             </div>
 
             <div id="infodiv" style="display:none;">
-                <p class="info" id="infoabout">Mă numesc Ciprian.Sunt un dezvoltator de site-uri web.Am pus la o laltă toate proiectele mele personale într-o platformă în care să vă distrați încercându-le.</p><br>
+                <p class="info" id="infoabout">Mă numesc Ciprian.Sunt web developer.Am pus laolaltă toate proiectele mele ca să vă distrați cu ele.</p><br>
                 <p class="info" id="infoemail">Contactați-mă:<span style="text-decoration: underline;">cipriancorobcacc@pm.me</span></p>
             </div>
 
             <div id="redirect" style="display:none;">
-                <p class="info" id="inforedir">Vei fi direcționat către un nou tab.</p>
-            </div>
-
-            <div id="tall" style="display:none;">
-                <div id="tallproc" style="display:block;">
-                    
-                    <p class="contentinfo" id="cnf1">Cât de înalt va fi copilul tău când va crește?</p>
-
-                    <img src="../../resources/tall.gif" width="400" height="300" class="imagery" style="margin-top:0;">
-
-                    <div>
-                        <select class="textint" onchange="Gay()" id="selecta1">
-                            <option value="none">??????</option>
-                            <option value="hetero">Heterosexual</option>
-                            <option value="gay">Homosexual</option>
-                        </select><br>
-
-                        <input type="number" min="0" max="300" placeholder="Her height" class="textint" id="her"><br>
-                        <input type="number" min="0" max="300" placeholder="His height" class="textint" id="him"><br>
-
-                        <select class="textint" id="selecta15">
-                            <option value="none">??????</option>
-                            <option value="f">Fată</option>
-                            <option value="m">Băiat</option>
-                        </select><br>
-
-                        <button class="conferma" id="c1" onclick="Tallreslt()">Află!</button>
-                    </div>
-                </div>
-
-                <div id="tallresult" style="display:none;">
-                    <p class="contentinfo" id="rslt1">Înălțimea fiului tău la maturitate va fi:</p><br>
-
-                    <label class="reslbl" id="res1" style="margin-top:300px;margin-bottom:200px;">300</label><br>
-
-                    <a class="info" id="credits" href="https://www.mayoclinic.org/healthy-lifestyle/childrens-health/expert-answers/child-growth/faq-20057990#:~:text=Here's%20a%20popular%20example%3A,Divide%20by%202.">Credits to the formula</a>
-                    
-                    <br><button class="conferma" id="retry1" onclick="Showtall()">Mai încearcă!</button>
-                </div>
-            </div>
-
-            <div id="imager" style="display:none;">
-                <div id="imgproc" style="display:block;">
-                    
-                    <p class="contentinfo" id="cnf2">Poza ta încape pe desktop-ul tău?</p>
-
-                    <img src="../../resources/does_img_fit.gif" width="400" height="300" class="imagery" style="margin-top:0;">
-
-                    <div>
-                        <input type="file" accept="image/jpg" id="fileint">
-
-                        <button class="conferma" id="c2" onclick="Imageres()">Verifică!</button>
-                    </div>
-                </div>
-
-                <div id="imgresult" style="display:none;">
-                    <p class="contentinfo" id="rslt2">Da!Cred...</p><br>
-
-                    <label class="reslbl" id="res2" style="margin-top:300px;margin-bottom:200px;">1000x1000</label><br>
-                    <label class="reslbl" id="res21" style="margin-top:300px;margin-bottom:200px;">1:1</label><br>
-
-                    <button class="conferma" id="retry2" onclick="Showimg()">Mai încearcă!</button>
-                </div>
-            </div>
-
-            <div id="calc" style="display:none;">
-                <div id="calcproc" style="display:block;">
-                    
-                    <p class="contentinfo" id="cnf4">Avem un calculator care dă răspunsuri greșite</p>
-                    <p class="smallinfo" id="cnf4">Ocazional dă și răspunsuri corecte</p>
-
-                    <img src="../../resources/wrong_calc.gif" width="400" height="300" class="imagery" style="margin-top:20;">
-
-                    <div>
-                        <textarea class="formula" id="formula" readonly value=""></textarea><br>
-                        <button class="nums" id="numbtn7" onclick="PressCalcNumButton('7')">7</button>
-                        <button class="nums" id="numbtn8" onclick="PressCalcNumButton('8')">8</button>
-                        <button class="nums" id="numbtn9" onclick="PressCalcNumButton('9')">9</button>
-                        <button class="nums" id="numbtnd" onclick="PressCalcOpButton('÷')">÷</button><br>
-                        <button class="nums" id="numbtn4" onclick="PressCalcNumButton('4')">4</button>
-                        <button class="nums" id="numbtn5" onclick="PressCalcNumButton('5')">5</button>
-                        <button class="nums" id="numbtn6" onclick="PressCalcNumButton('6')">6</button>
-                        <button class="nums" id="numbtnx" onclick="PressCalcOpButton('×')">×</button><br>
-                        <button class="nums" id="numbtn1" onclick="PressCalcNumButton('1')">1</button>
-                        <button class="nums" id="numbtn2" onclick="PressCalcNumButton('2')">2</button>
-                        <button class="nums" id="numbtn3" onclick="PressCalcNumButton('3')">3</button>
-                        <button class="nums" id="numbtn-" onclick="PressCalcOpButton('-')">-</button><br>
-                        <button class="equals" id="c4" onclick="Calcreslt()">=</button>
-                        <button class="nums" id="numbtn0" onclick="PressCalcNumButton('0')">0</button>
-                        <button class="nums" id="numbtnc" onclick="PressCalcDotButton()">.</button>
-                        <button class="nums" id="numbtnp" onclick="PressCalcOpButton('+')">+</button>
-                    </div>
-                </div>
+                <p class="info" id="inforedir">Veți fi redirecționați către o pagină nouă.</p>
             </div>
         </div>
         
