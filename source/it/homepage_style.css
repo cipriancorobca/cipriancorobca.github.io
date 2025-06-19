@@ -341,7 +341,7 @@ button
     background-color: aqua;
     margin-top:0px;
     margin-left:0px;
-    background-image: url("../../resources/en.png");
+    background-image: url("../../resources/it.png");
     transition: all 0.3s;
 }
 
@@ -354,7 +354,7 @@ button
     background-color: aqua;
     margin-top:10px;
     margin-left:2px;
-    background-image: url("../../resources/it.png");
+    background-image: url("../../resources/en.png");
     visibility: hidden;
 }
 
