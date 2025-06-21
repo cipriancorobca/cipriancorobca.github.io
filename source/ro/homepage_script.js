@@ -31,7 +31,7 @@ function Showredirect(a)
         {
             case 1:
             {
-                window.open("https://tryit-vopz.onrender.com","_blank");
+                window.open("https://tryitthegame.cc","_blank");
             }
 
             case 2:
