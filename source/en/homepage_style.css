@@ -161,6 +161,9 @@ button
     margin:15px;
     border-radius: 7px;
     float:left;
+    object-fit: cover;
+    width: 256px;
+    height: 192px;
 }
 
 /*  textele de info de pe patrati   */
