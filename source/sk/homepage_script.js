@@ -31,7 +31,7 @@ function Showredirect(a)
         {
             case 1:
             {
-                window.open("https://tryitthegame.cc","_blank");
+                window.open("https://thelanguagelearningsearch.com","_blank");
             }
 
             case 2:
@@ -42,6 +42,11 @@ function Showredirect(a)
             case 3:
             {
                 window.open("../../resources/css_boxes/index.html","_blank");
+            }
+
+            case 4:
+            {
+                window.open("https://tryitthegame.cc","_blank");
             }
         }
     },2552);
